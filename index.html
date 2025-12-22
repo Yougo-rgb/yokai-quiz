@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-kai Quiz</title>
+</head>
+<body>
+
+    <h1 data-i18n="quiz.title">Yo-kai Watch Quiz</h1>
+
+    <label for="lang-select" data-i18n="quiz.labelLangueSelection"> Langue</label>
+    <select id="lang-select">
+        <option value="fr" data-i18n="quiz.optionFrench">French</option>
+        <option value="en" data-i18n="quiz.optionEnglish">English</option>
+    </select>
+
+    <script type="module">
+        import { loadLang, applyTranslations } from "./src/i18n.js";
+
+        const select = document.getElementById("lang-select");
+
+        let savedLang = localStorage.getItem("lang") || "en";
+
+        await loadLang(savedLang);
+        applyTranslations();
+        select.value = savedLang
+
+        select.addEventListener("change", async () => {
+            const lang = select.value;
+            await loadLang(lang);
+            applyTranslations()
+            localStorage.setItem("lang", lang)
+        })
+    </script>
+
+</body>
+</html>
