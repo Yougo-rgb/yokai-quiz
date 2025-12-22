@@ -1,5 +1,4 @@
 {
-  "$schema": "../schemas/yokai.schema.json",
   "yokai": [
     {
       "id": 1,
@@ -8,11 +7,22 @@
       "rank_id": "e",
       "yokai_type": "regular",
       "first_game_id": "ykw1",
-      "game_ids": ["ykw1", "ykw2", "ykw3"],
+      "game_ids": [
+        "ykw1"
+      ],
       "names": {
-        "en": { "display": "Pandle", "aliases": [] },
-        "fr": { "display": "Woko", "aliases": [] },
-        "jp": { "display": "ぶようじん坊", "aliases": ["Buyoujinbou"] }
+        "en": {
+          "display": "Pandle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
       }
     },
     {
@@ -22,11 +32,22 @@
       "rank_id": "c",
       "yokai_type": "regular",
       "first_game_id": "ykw1",
-      "game_ids": ["ykw1", "ykw2", "ykw3"],
+      "game_ids": [
+        "ykw1"
+      ],
       "names": {
-        "en": { "display": "Undy", "aliases": [] },
-        "fr": { "display": "Pagno", "aliases": [] },
-        "jp": { "display": "がらあきん坊", "aliases": ["Garaakinbou"] }
+        "en": {
+          "display": "Undy",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
       }
     },
     {
@@ -34,13 +55,6074 @@
       "image": "../../assets/yokai/tanbo.png",
       "tribe_id": "brave",
       "rank_id": "b",
-      "yokai_type": "rare",
+      "yokai_type": "regular",
       "first_game_id": "ykw1",
-      "game_ids": ["ykw1", "ykw2", "ykw3"],
+      "game_ids": [
+        "ykw1"
+      ],
       "names": {
-        "en": { "display": "Tanbo", "aliases": [] },
-        "fr": { "display": "Alfoncéo", "aliases": [] },
-        "jp": { "display": "さきがけの助", "aliases": ["Sakigakenosuke"] }
+        "en": {
+          "display": "Tanbo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 4,
+      "image": "../../assets/yokai/cutta-nah.png",
+      "tribe_id": "brave",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cutta-nah",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 5,
+      "image": "../../assets/yokai/cutta-nah-nah.png",
+      "tribe_id": "brave",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cutta-nah-nah",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 6,
+      "image": "../../assets/yokai/slacka-slash.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Slacka-slash",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 7,
+      "image": "../../assets/yokai/mochismo.png",
+      "tribe_id": "brave",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Mochismo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 8,
+      "image": "../../assets/yokai/minochi.png",
+      "tribe_id": "brave",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Minochi",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 9,
+      "image": "../../assets/yokai/helmsman.png",
+      "tribe_id": "brave",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Helmsman",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 10,
+      "image": "../../assets/yokai/reuknight.png",
+      "tribe_id": "brave",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Reuknight",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 11,
+      "image": "../../assets/yokai/corptain.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Corptain",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 12,
+      "image": "../../assets/yokai/blazion.png",
+      "tribe_id": "brave",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Blazion",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 13,
+      "image": "../../assets/yokai/quaken.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Quaken",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 14,
+      "image": "../../assets/yokai/siro.png",
+      "tribe_id": "brave",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Siro",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 15,
+      "image": "../../assets/yokai/chansin.png",
+      "tribe_id": "brave",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Chansin",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 16,
+      "image": "../../assets/yokai/sheen.png",
+      "tribe_id": "brave",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Sheen",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 17,
+      "image": "../../assets/yokai/snee.png",
+      "tribe_id": "brave",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Snee",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 18,
+      "image": "../../assets/yokai/gleam.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Gleam",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 19,
+      "image": "../../assets/yokai/benkei.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Benkei",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 20,
+      "image": "../../assets/yokai/b3-nk1.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "B3-NK1",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 21,
+      "image": "../../assets/yokai/sushiyama.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Sushiyama",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 22,
+      "image": "../../assets/yokai/kapunki.png",
+      "tribe_id": "brave",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Kapunki",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 23,
+      "image": "../../assets/yokai/beetler.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Beetler",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 24,
+      "image": "../../assets/yokai/beetall.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Beetall",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 25,
+      "image": "../../assets/yokai/cruncha.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cruncha",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 26,
+      "image": "../../assets/yokai/zerberker.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Zerberker",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 27,
+      "image": "../../assets/yokai/snartle.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Snartle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 28,
+      "image": "../../assets/yokai/snotsolong.png",
+      "tribe_id": "mysterious",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Snotsolong",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 29,
+      "image": "../../assets/yokai/duchoo.png",
+      "tribe_id": "mysterious",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Duchoo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 30,
+      "image": "../../assets/yokai/wazzat.png",
+      "tribe_id": "mysterious",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Wazzat",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 31,
+      "image": "../../assets/yokai/dummkap.png",
+      "tribe_id": "mysterious",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dummkap",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 32,
+      "image": "../../assets/yokai/d'wanna.png",
+      "tribe_id": "mysterious",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "D'wanna",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 33,
+      "image": "../../assets/yokai/n'more.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "N'more",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 34,
+      "image": "../../assets/yokai/q'wit.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Q'wit",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 35,
+      "image": "../../assets/yokai/lafalotta.png",
+      "tribe_id": "mysterious",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Lafalotta",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 36,
+      "image": "../../assets/yokai/blips.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Blips",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 37,
+      "image": "../../assets/yokai/tattletell.png",
+      "tribe_id": "mysterious",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tattletell",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 38,
+      "image": "../../assets/yokai/tattlecast.png",
+      "tribe_id": "mysterious",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tattlecast",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 39,
+      "image": "../../assets/yokai/skranny.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Skranny",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 40,
+      "image": "../../assets/yokai/cupistol.png",
+      "tribe_id": "mysterious",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cupistol",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 41,
+      "image": "../../assets/yokai/casanuva.png",
+      "tribe_id": "mysterious",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Casanuva",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 42,
+      "image": "../../assets/yokai/casanono.png",
+      "tribe_id": "mysterious",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Casanono",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 43,
+      "image": "../../assets/yokai/signibble.png",
+      "tribe_id": "mysterious",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Signibble",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 44,
+      "image": "../../assets/yokai/signiton.png",
+      "tribe_id": "mysterious",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Signiton",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 45,
+      "image": "../../assets/yokai/statiking.png",
+      "tribe_id": "mysterious",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Statiking",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 46,
+      "image": "../../assets/yokai/mirapo.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Mirapo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 47,
+      "image": "../../assets/yokai/mircle.png",
+      "tribe_id": "mysterious",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Mircle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 48,
+      "image": "../../assets/yokai/illoo.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Illoo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 49,
+      "image": "../../assets/yokai/elloo.png",
+      "tribe_id": "mysterious",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Elloo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 50,
+      "image": "../../assets/yokai/alloo.png",
+      "tribe_id": "mysterious",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Alloo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 51,
+      "image": "../../assets/yokai/espy.png",
+      "tribe_id": "mysterious",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Espy",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 52,
+      "image": "../../assets/yokai/infour.png",
+      "tribe_id": "mysterious",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Infour",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 53,
+      "image": "../../assets/yokai/tengu.png",
+      "tribe_id": "mysterious",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tengu",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 54,
+      "image": "../../assets/yokai/flengu.png",
+      "tribe_id": "mysterious",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Flengu",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 55,
+      "image": "../../assets/yokai/kyubi.png",
+      "tribe_id": "mysterious",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Kyubi",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 56,
+      "image": "../../assets/yokai/frostail.png",
+      "tribe_id": "mysterious",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Frostail",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 57,
+      "image": "../../assets/yokai/dulluma.png",
+      "tribe_id": "tough",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dulluma",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 58,
+      "image": "../../assets/yokai/darumacho.png",
+      "tribe_id": "tough",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Darumacho",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 59,
+      "image": "../../assets/yokai/goruma.png",
+      "tribe_id": "tough",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Goruma",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 60,
+      "image": "../../assets/yokai/noway.png",
+      "tribe_id": "tough",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Noway",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 61,
+      "image": "../../assets/yokai/impass.png",
+      "tribe_id": "tough",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Impass",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 62,
+      "image": "../../assets/yokai/walldin.png",
+      "tribe_id": "tough",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Walldin",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 63,
+      "image": "../../assets/yokai/armsman.png",
+      "tribe_id": "tough",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Armsman",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 64,
+      "image": "../../assets/yokai/fidgephant.png",
+      "tribe_id": "tough",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Fidgephant",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 65,
+      "image": "../../assets/yokai/touphant.png",
+      "tribe_id": "tough",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Touphant",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 66,
+      "image": "../../assets/yokai/blowkade.png",
+      "tribe_id": "tough",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Blowkade",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 67,
+      "image": "../../assets/yokai/ledballoon.png",
+      "tribe_id": "tough",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Ledballoon",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 68,
+      "image": "../../assets/yokai/mad_mountain.png",
+      "tribe_id": "tough",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Mad Mountain",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 69,
+      "image": "../../assets/yokai/lava_lord.png",
+      "tribe_id": "tough",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Lava Lord",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 70,
+      "image": "../../assets/yokai/roughraff.png",
+      "tribe_id": "tough",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Roughraff",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 71,
+      "image": "../../assets/yokai/badude.png",
+      "tribe_id": "tough",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Badude",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 72,
+      "image": "../../assets/yokai/bruff.png",
+      "tribe_id": "tough",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Bruff",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 73,
+      "image": "../../assets/yokai/rhinoggin.png",
+      "tribe_id": "tough",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rhinoggin",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 74,
+      "image": "../../assets/yokai/rhinormous.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rhinormous",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 75,
+      "image": "../../assets/yokai/hornaplenty.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Hornaplenty",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 76,
+      "image": "../../assets/yokai/castelius_iii.png",
+      "tribe_id": "tough",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Castelius III",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 77,
+      "image": "../../assets/yokai/castelius_ii.png",
+      "tribe_id": "tough",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Castelius II",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 78,
+      "image": "../../assets/yokai/castelius_i.png",
+      "tribe_id": "tough",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Castelius I",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 79,
+      "image": "../../assets/yokai/castelius_max.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Castelius Max",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 80,
+      "image": "../../assets/yokai/robonyan.png",
+      "tribe_id": "tough",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Robonyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 81,
+      "image": "../../assets/yokai/goldenyan.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Goldenyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 82,
+      "image": "../../assets/yokai/dromp.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dromp",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 83,
+      "image": "../../assets/yokai/swosh.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Swosh",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 84,
+      "image": "../../assets/yokai/dazzabel.png",
+      "tribe_id": "charming",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dazzabel",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 85,
+      "image": "../../assets/yokai/rattelle.png",
+      "tribe_id": "charming",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rattelle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 86,
+      "image": "../../assets/yokai/skelebella.png",
+      "tribe_id": "charming",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Skelebella",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 87,
+      "image": "../../assets/yokai/cadin.png",
+      "tribe_id": "charming",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cadin",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 88,
+      "image": "../../assets/yokai/cadable.png",
+      "tribe_id": "charming",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cadable",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 89,
+      "image": "../../assets/yokai/singcada.png",
+      "tribe_id": "charming",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Singcada",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 90,
+      "image": "../../assets/yokai/pupsicle.png",
+      "tribe_id": "charming",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Pupsicle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 91,
+      "image": "../../assets/yokai/chilhuahua.png",
+      "tribe_id": "charming",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Chilhuahua",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 92,
+      "image": "../../assets/yokai/swelterrier.png",
+      "tribe_id": "charming",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Swelterrier",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 93,
+      "image": "../../assets/yokai/jibanyan.png",
+      "tribe_id": "charming",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Jibanyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 94,
+      "image": "../../assets/yokai/thornyan.png",
+      "tribe_id": "charming",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Thornyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 95,
+      "image": "../../assets/yokai/baddinyan.png",
+      "tribe_id": "charming",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Baddinyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 96,
+      "image": "../../assets/yokai/walkappa.png",
+      "tribe_id": "charming",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Walkappa",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 97,
+      "image": "../../assets/yokai/appak.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Appak",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 98,
+      "image": "../../assets/yokai/supyo.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Supyo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 99,
+      "image": "../../assets/yokai/komasan.png",
+      "tribe_id": "charming",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Komasan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 100,
+      "image": "../../assets/yokai/komane.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Komane",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 101,
+      "image": "../../assets/yokai/komajiro.png",
+      "tribe_id": "charming",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Komajiro",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 102,
+      "image": "../../assets/yokai/komiger.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Komiger",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 103,
+      "image": "../../assets/yokai/baku.png",
+      "tribe_id": "charming",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Baku",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 104,
+      "image": "../../assets/yokai/whapir.png",
+      "tribe_id": "charming",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Whapir",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 105,
+      "image": "../../assets/yokai/shmoopie.png",
+      "tribe_id": "charming",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Shmoopie",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 106,
+      "image": "../../assets/yokai/pinkipoo.png",
+      "tribe_id": "charming",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Pinkipoo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 107,
+      "image": "../../assets/yokai/pookivil.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Pookivil",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 108,
+      "image": "../../assets/yokai/frostina.png",
+      "tribe_id": "charming",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Frostina",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 109,
+      "image": "../../assets/yokai/blizzaria.png",
+      "tribe_id": "charming",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Blizzaria",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 110,
+      "image": "../../assets/yokai/damona.png",
+      "tribe_id": "charming",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Damona",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 111,
+      "image": "../../assets/yokai/wiglin.png",
+      "tribe_id": "heartful",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Wiglin",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 112,
+      "image": "../../assets/yokai/steppa.png",
+      "tribe_id": "heartful",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Steppa",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 113,
+      "image": "../../assets/yokai/rhyth.png",
+      "tribe_id": "heartful",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rhyth",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 114,
+      "image": "../../assets/yokai/wantston.png",
+      "tribe_id": "heartful",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Wantston",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 115,
+      "image": "../../assets/yokai/grubsnitch.png",
+      "tribe_id": "heartful",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Grubsnitch",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 116,
+      "image": "../../assets/yokai/hungramps.png",
+      "tribe_id": "heartful",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Hungramps",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 117,
+      "image": "../../assets/yokai/hungorge.png",
+      "tribe_id": "heartful",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Hungorge",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 118,
+      "image": "../../assets/yokai/grainpa.png",
+      "tribe_id": "heartful",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Grainpa",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 119,
+      "image": "../../assets/yokai/lodo.png",
+      "tribe_id": "heartful",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Lodo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 120,
+      "image": "../../assets/yokai/chippa.png",
+      "tribe_id": "heartful",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Chippa",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 121,
+      "image": "../../assets/yokai/enerfly.png",
+      "tribe_id": "heartful",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Enerfly",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 122,
+      "image": "../../assets/yokai/enefly.png",
+      "tribe_id": "heartful",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Enefly",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 123,
+      "image": "../../assets/yokai/betterfly.png",
+      "tribe_id": "heartful",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Betterfly",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 124,
+      "image": "../../assets/yokai/peppillon.png",
+      "tribe_id": "heartful",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Peppillon",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 125,
+      "image": "../../assets/yokai/happierre.png",
+      "tribe_id": "heartful",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Happierre",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 126,
+      "image": "../../assets/yokai/reversa.png",
+      "tribe_id": "heartful",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Reversa",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 127,
+      "image": "../../assets/yokai/reversette.png",
+      "tribe_id": "heartful",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Reversette",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 128,
+      "image": "../../assets/yokai/ol'_saint_trick.png",
+      "tribe_id": "heartful",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Ol' Saint Trick",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 129,
+      "image": "../../assets/yokai/ol'_fortune.png",
+      "tribe_id": "heartful",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Ol' Fortune",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 130,
+      "image": "../../assets/yokai/rollen.png",
+      "tribe_id": "heartful",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rollen",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 131,
+      "image": "../../assets/yokai/dubbles.png",
+      "tribe_id": "heartful",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dubbles",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 132,
+      "image": "../../assets/yokai/papa_bolt.png",
+      "tribe_id": "heartful",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Papa Bolt",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 133,
+      "image": "../../assets/yokai/uncle_infinite.png",
+      "tribe_id": "heartful",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Uncle Infinite",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 134,
+      "image": "../../assets/yokai/mama_aura.png",
+      "tribe_id": "heartful",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Mama Aura",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 135,
+      "image": "../../assets/yokai/auntie_heart.png",
+      "tribe_id": "heartful",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Auntie Heart",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 136,
+      "image": "../../assets/yokai/leadoni.png",
+      "tribe_id": "shady",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Leadoni",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 137,
+      "image": "../../assets/yokai/mynimo.png",
+      "tribe_id": "shady",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Mynimo",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 138,
+      "image": "../../assets/yokai/ake.png",
+      "tribe_id": "shady",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Ake",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 139,
+      "image": "../../assets/yokai/payn.png",
+      "tribe_id": "shady",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Payn",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 140,
+      "image": "../../assets/yokai/agon.png",
+      "tribe_id": "shady",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Agon",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 141,
+      "image": "../../assets/yokai/negatibuzz.png",
+      "tribe_id": "shady",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Negatibuzz",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 142,
+      "image": "../../assets/yokai/moskevil.png",
+      "tribe_id": "shady",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Moskevil",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 143,
+      "image": "../../assets/yokai/scritchy.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Scritchy",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 144,
+      "image": "../../assets/yokai/dimmy.png",
+      "tribe_id": "shady",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dimmy",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 145,
+      "image": "../../assets/yokai/blandon.png",
+      "tribe_id": "shady",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Blandon",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 146,
+      "image": "../../assets/yokai/nul.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Nul",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 147,
+      "image": "../../assets/yokai/hidabat.png",
+      "tribe_id": "shady",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Hidabat",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 148,
+      "image": "../../assets/yokai/abodabat.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Abodabat",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 149,
+      "image": "../../assets/yokai/belfree.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Belfree",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 150,
+      "image": "../../assets/yokai/suspicioni.png",
+      "tribe_id": "shady",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Suspicioni",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 151,
+      "image": "../../assets/yokai/tantroni.png",
+      "tribe_id": "shady",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tantroni",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 152,
+      "image": "../../assets/yokai/contrarioni.png",
+      "tribe_id": "shady",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Contrarioni",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 153,
+      "image": "../../assets/yokai/tengloom.png",
+      "tribe_id": "shady",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tengloom",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 154,
+      "image": "../../assets/yokai/nird.png",
+      "tribe_id": "shady",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Nird",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 155,
+      "image": "../../assets/yokai/negasus.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Negasus",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 156,
+      "image": "../../assets/yokai/neighfarious.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Neighfarious",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 157,
+      "image": "../../assets/yokai/timidevil.png",
+      "tribe_id": "shady",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Timidevil",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 158,
+      "image": "../../assets/yokai/beelzebold.png",
+      "tribe_id": "shady",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Beelzebold",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 159,
+      "image": "../../assets/yokai/count_cavity.png",
+      "tribe_id": "shady",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Count Cavity",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 160,
+      "image": "../../assets/yokai/greesel.png",
+      "tribe_id": "shady",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Greesel",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 161,
+      "image": "../../assets/yokai/awevil.png",
+      "tribe_id": "shady",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Awevil",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 162,
+      "image": "../../assets/yokai/coughkoff.png",
+      "tribe_id": "eerie",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Coughkoff",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 163,
+      "image": "../../assets/yokai/hurchin.png",
+      "tribe_id": "eerie",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Hurchin",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 164,
+      "image": "../../assets/yokai/peckpocket.png",
+      "tribe_id": "eerie",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Peckpocket",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 165,
+      "image": "../../assets/yokai/rockabelly.png",
+      "tribe_id": "eerie",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rockabelly",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 166,
+      "image": "../../assets/yokai/buhu.png",
+      "tribe_id": "eerie",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Buhu",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 167,
+      "image": "../../assets/yokai/flumpy.png",
+      "tribe_id": "eerie",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Flumpy",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 168,
+      "image": "../../assets/yokai/skreek.png",
+      "tribe_id": "eerie",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Skreek",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 169,
+      "image": "../../assets/yokai/manjimutt.png",
+      "tribe_id": "eerie",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Manjimutt",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 170,
+      "image": "../../assets/yokai/multimutt.png",
+      "tribe_id": "eerie",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Multimutt",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 171,
+      "image": "../../assets/yokai/sir_berus.png",
+      "tribe_id": "eerie",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Sir Berus",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 172,
+      "image": "../../assets/yokai/droplette.png",
+      "tribe_id": "eerie",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Droplette",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 173,
+      "image": "../../assets/yokai/drizzle.png",
+      "tribe_id": "eerie",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Drizzle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 174,
+      "image": "../../assets/yokai/slush.png",
+      "tribe_id": "eerie",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Slush",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 175,
+      "image": "../../assets/yokai/alhail.png",
+      "tribe_id": "eerie",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Alhail",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 176,
+      "image": "../../assets/yokai/gush.png",
+      "tribe_id": "eerie",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Gush",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 177,
+      "image": "../../assets/yokai/chatalie.png",
+      "tribe_id": "eerie",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Chatalie",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 178,
+      "image": "../../assets/yokai/nagatha.png",
+      "tribe_id": "eerie",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Nagatha",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 179,
+      "image": "../../assets/yokai/dismarelda.png",
+      "tribe_id": "eerie",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dismarelda",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 180,
+      "image": "../../assets/yokai/cheeksqueek.png",
+      "tribe_id": "eerie",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cheeksqueek",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 181,
+      "image": "../../assets/yokai/cuttincheez.png",
+      "tribe_id": "eerie",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cuttincheez",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 182,
+      "image": "../../assets/yokai/compunzer.png",
+      "tribe_id": "eerie",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Compunzer",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 183,
+      "image": "../../assets/yokai/lamedian.png",
+      "tribe_id": "eerie",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Lamedian",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 184,
+      "image": "../../assets/yokai/grumples.png",
+      "tribe_id": "eerie",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Grumples",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 185,
+      "image": "../../assets/yokai/everfore.png",
+      "tribe_id": "eerie",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Everfore",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 186,
+      "image": "../../assets/yokai/eterna.png",
+      "tribe_id": "eerie",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Eterna",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 187,
+      "image": "../../assets/yokai/insomni.png",
+      "tribe_id": "eerie",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Insomni",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 188,
+      "image": "../../assets/yokai/sandi.png",
+      "tribe_id": "eerie",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Sandi",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 189,
+      "image": "../../assets/yokai/noko.png",
+      "tribe_id": "slippery",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Noko",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 190,
+      "image": "../../assets/yokai/bloominoko.png",
+      "tribe_id": "slippery",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Bloominoko",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 191,
+      "image": "../../assets/yokai/pandanoko.png",
+      "tribe_id": "slippery",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Pandanoko",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 192,
+      "image": "../../assets/yokai/heheheel.png",
+      "tribe_id": "slippery",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Heheheel",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 193,
+      "image": "../../assets/yokai/croonger.png",
+      "tribe_id": "slippery",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Croonger",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 194,
+      "image": "../../assets/yokai/urnaconda.png",
+      "tribe_id": "slippery",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Urnaconda",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 195,
+      "image": "../../assets/yokai/fishpicable.png",
+      "tribe_id": "slippery",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Fishpicable",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 196,
+      "image": "../../assets/yokai/rageon.png",
+      "tribe_id": "slippery",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rageon",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 197,
+      "image": "../../assets/yokai/tunatic.png",
+      "tribe_id": "slippery",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tunatic",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 198,
+      "image": "../../assets/yokai/draggie.png",
+      "tribe_id": "slippery",
+      "rank_id": "d",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Draggie",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 199,
+      "image": "../../assets/yokai/dragon_lord.png",
+      "tribe_id": "slippery",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dragon Lord",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 200,
+      "image": "../../assets/yokai/azure_dragon.png",
+      "tribe_id": "slippery",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Azure Dragon",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 201,
+      "image": "../../assets/yokai/daiz.png",
+      "tribe_id": "slippery",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Daiz",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 202,
+      "image": "../../assets/yokai/confuze.png",
+      "tribe_id": "slippery",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Confuze",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 203,
+      "image": "../../assets/yokai/chummer.png",
+      "tribe_id": "slippery",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Chummer",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 204,
+      "image": "../../assets/yokai/shrook.png",
+      "tribe_id": "slippery",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Shrook",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 205,
+      "image": "../../assets/yokai/spenp.png",
+      "tribe_id": "slippery",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Spenp",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 206,
+      "image": "../../assets/yokai/almi.png",
+      "tribe_id": "slippery",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Almi",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 207,
+      "image": "../../assets/yokai/babblong.png",
+      "tribe_id": "slippery",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Babblong",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 208,
+      "image": "../../assets/yokai/bananose.png",
+      "tribe_id": "slippery",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Bananose",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 209,
+      "image": "../../assets/yokai/copperled.png",
+      "tribe_id": "slippery",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Copperled",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 210,
+      "image": "../../assets/yokai/cynake.png",
+      "tribe_id": "slippery",
+      "rank_id": "b",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Cynake",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 211,
+      "image": "../../assets/yokai/slitheref.png",
+      "tribe_id": "slippery",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Slitheref",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 212,
+      "image": "../../assets/yokai/venoct.png",
+      "tribe_id": "slippery",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Venoct",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 213,
+      "image": "../../assets/yokai/shad_venoct.png",
+      "tribe_id": "slippery",
+      "rank_id": "s",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Shad. Venoct",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 214,
+      "image": "../../assets/yokai/shogunyan.png",
+      "tribe_id": "brave",
+      "rank_id": "s",
+      "yokai_type": "legendary",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Shogunyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 215,
+      "image": "../../assets/yokai/komashura.png",
+      "tribe_id": "mysterious",
+      "rank_id": "s",
+      "yokai_type": "legendary",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Komashura",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 216,
+      "image": "../../assets/yokai/dandoodle.png",
+      "tribe_id": "eerie",
+      "rank_id": "s",
+      "yokai_type": "legendary",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dandoodle",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 217,
+      "image": "../../assets/yokai/elder_bloom.png",
+      "tribe_id": "heartful",
+      "rank_id": "s",
+      "yokai_type": "legendary",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Elder Bloom",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 218,
+      "image": "../../assets/yokai/gilgaros.png",
+      "tribe_id": "tough",
+      "rank_id": "s",
+      "yokai_type": "legendary",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Gilgaros",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 219,
+      "image": "../../assets/yokai/sapphinyan.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Sapphinyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 220,
+      "image": "../../assets/yokai/emenyan.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Emenyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 221,
+      "image": "../../assets/yokai/rubinyan.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Rubinyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 222,
+      "image": "../../assets/yokai/topanyan.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Topanyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 223,
+      "image": "../../assets/yokai/dianyan.png",
+      "tribe_id": "charming",
+      "rank_id": "a",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dianyan",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 224,
+      "image": "../../assets/yokai/slimamander.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Slimamander",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 225,
+      "image": "../../assets/yokai/sproink.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Sproink",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 226,
+      "image": "../../assets/yokai/sv_snaggerjag.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "SV Snaggerjag",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 227,
+      "image": "../../assets/yokai/massiface.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Massiface",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 228,
+      "image": "../../assets/yokai/phantasmurai.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Phantasmurai",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 229,
+      "image": "../../assets/yokai/tarantutor.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Tarantutor",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 230,
+      "image": "../../assets/yokai/dr_maddiman.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dr. Maddiman",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 231,
+      "image": "../../assets/yokai/mckraken.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "McKraken",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 232,
+      "image": "../../assets/yokai/mckraken.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "McKraken",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 233,
+      "image": "../../assets/yokai/duwheel.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Duwheel",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 234,
+      "image": "../../assets/yokai/chirpster.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Chirpster",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 235,
+      "image": "../../assets/yokai/eyedra.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Eyedra",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 236,
+      "image": "../../assets/yokai/hoggles.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Hoggles",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 237,
+      "image": "../../assets/yokai/styx_mkvi.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Styx Mk.VI",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 238,
+      "image": "../../assets/yokai/clipso.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Clipso",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 239,
+      "image": "../../assets/yokai/dr_nogut.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Dr. Nogut",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 240,
+      "image": "../../assets/yokai/spooklunk.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Spooklunk",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 241,
+      "image": "../../assets/yokai/squisker.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Squisker",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 242,
+      "image": "../../assets/yokai/wobblewok.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Wobblewok",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 243,
+      "image": "../../assets/yokai/gargaros.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Gargaros",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 244,
+      "image": "../../assets/yokai/ogralus.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Ogralus",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
+      }
+    },
+    {
+      "id": 245,
+      "image": "../../assets/yokai/orcanos.png",
+      "tribe_id": "boss",
+      "rank_id": "unknown",
+      "yokai_type": "boss",
+      "first_game_id": "ykw1",
+      "game_ids": [
+        "ykw1"
+      ],
+      "names": {
+        "en": {
+          "display": "Orcanos",
+          "aliases": []
+        },
+        "fr": {
+          "display": "unknown",
+          "aliases": []
+        },
+        "jp": {
+          "display": "unknown",
+          "aliases": []
+        }
       }
     }
   ]
