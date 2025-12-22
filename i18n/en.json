@@ -6,6 +6,9 @@
         "optionEnglish": "English",
         "toggleTheme": "Toggle Theme",
         "timer": "Timer",
-        "inputPlaceholder": "Yo-Kai"
+        "inputPlaceholder": "Yo-Kai",
+        "selectGameMode": "Select Game Mode",
+        "modeAll": "All",
+        "startGame": "Start Game"
     }
 }

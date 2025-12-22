@@ -8,21 +8,36 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="header-title" data-i18n="quiz.title">Yo-kai Watch Quiz</h1>
-
-        <input type="text" id="yo-kai-name" data-i18n-placeholder="quiz.inputPlaceholder">
-
-        <output class="header-timer" id="timer" data-i18n="quiz.timer"></output>
-
-        <output class="header-score" id="score">0 / 245</output>
+        <div class="header-right">
+            <h1 class="header-title" data-i18n="quiz.title">Yo-kai Watch Quiz</h1>
+            <input type="text" id="yo-kai-name" data-i18n-placeholder="quiz.inputPlaceholder">
+            <output class="header-timer" id="timer" data-i18n="quiz.timer"></output>
+            <output class="header-score" id="score">0 / 245</output>
+        </div>
     
-        <!-- <label class="header-label" for="lang-select" data-i18n="quiz.labelLangueSelection">Langue</label> -->
-        <select class="header-lang-select" id="lang-select">
-            <option value="fr" data-i18n="quiz.optionFrench">French</option>
-            <option value="en" data-i18n="quiz.optionEnglish">English</option>
-        </select>
-    
-        <button class="header-toggle-theme" id="theme-toggle" data-i18n="quiz.toggleTheme">Toggle Theme</button>
+        <div class="header-left">
+            <!-- <label class="header-label" for="lang-select" data-i18n="quiz.labelLangueSelection">Langue</label> -->
+            <select class="header-lang-select" id="lang-select">
+                <option value="fr" data-i18n="quiz.optionFrench">French</option>
+                <option value="en" data-i18n="quiz.optionEnglish">English</option>
+            </select>
+            <button class="header-toggle-theme" id="theme-toggle" data-i18n="quiz.toggleTheme">Toggle Theme</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <button id="start-game" data-i18n="quiz.startGame">Start Game</button>
+    </div>
+
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <h2 data-i18n="quiz.selectGameMode">Select Game Mode</h2>
+            <div class="mode-buttons">
+                <!-- Buttons generated with main.js -->
+            </div>
+            <br>
+            <button id="close-modal">Cancel</button>
+        </div>
     </div>
 
     <script type="module" src="./src/main.js"></script>
