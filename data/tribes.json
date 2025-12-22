@@ -1,64 +1,115 @@
 {
     "$schema": "./schemas/tribes.schema.json",
-    
-    "brave": {
-        "id": "brave",
-        "name": "Brave",
-        "color": "#ED4122",
-        "image": "../assets/tribes/brave.png"
-    },
-    "mysterious": {
-        "id": "mysterious",
-        "name": "Mysterious",
-        "color": "#FEF006",
-        "image": "../assets/tribes/mysterious.png"
-    },
-    "tough": {
-        "id": "tough",
-        "name": "Tough",
-        "color": "#F58144",
-        "image": "../assets/tribes/tough.png"
-    },
-    "charming": {
-        "id": "charming",
-        "name": "Charming",
-        "color": "#F359A1",
-        "image": "../assets/tribes/charming.png"
-    },
-    "heartful": {
-        "id": "heartful",
-        "name": "Heartful",
-        "color": "#59B855",
-        "image": "../assets/tribes/heartful.png"
-    },
-    "shady": {
-        "id": "shady",
-        "name": "Shady",
-        "color": "#05ACE8",
-        "image": "../assets/tribes/shady.png"
-    },
-    "eerie": {
-        "id": "eerie",
-        "name": "Eerie",
-        "color": "#9E54A2",
-        "image": "../assets/tribes/eerie.png"
-    },
-    "slippery": {
-        "id": "slippery",
-        "name": "Slippery",
-        "color": "#4CC5E1",
-        "image": "../assets/tribes/slippery.png"
-    },
-    "boss": {
-        "id": "boss",
-        "name": "Boss",
-        "color": "#272527",
-        "image": "../assets/tribes/boss.png"
-    },
-    "wicked": {
-        "id": "wicked",
-        "name": "Wicked",
-        "color": "#0C0E31",
-        "image": "../assets/tribes/wicked.png"
-    }
+    "tribes": [
+        {
+            "id": "brave",
+            "names": {
+                "en" : { "display": "Brave", "aliases": [] },
+                "fr" : { "display": "Vaillants", "aliases": [] },
+                "jp" : { "display": "イサマシ族", "aliases": ["Isamashi-zoku"] }
+            },
+            "color": "#ED4122",
+            "image": "../assets/tribes/brave.png"
+        },
+        {
+            "id": "mysterious",
+            "names": {
+                "en" : { "display": "Mysterious", "aliases": [] },
+                "fr" : { "display": "Mystérieux", "aliases": [] },
+                "jp" : { "display": "フシギ族", "aliases": ["Fushigi-zoku"] }
+            },
+            "color": "#FEF006",
+            "image": "../assets/tribes/mysterious.png"
+        },
+        {
+            "id": "tough",
+            "names": {
+                "en" : { "display": "Tough", "aliases": [] },
+                "fr" : { "display": "Costauds", "aliases": [] },
+                "jp" : { "display": "ゴーケツ族", "aliases": ["Gōketsu-zoku"] }
+            },
+            "color": "#F58144",
+            "image": "../assets/tribes/tough.png"
+        },
+        {
+            "id": "charming",
+            "names": {
+                "en" : { "display": "Charming", "aliases": [] },
+                "fr" : { "display": "Mignons", "aliases": [] },
+                "jp" : { "display": "プリチー族", "aliases": ["Purichī-zoku"] }
+            },
+            "color": "#F359A1",
+            "image": "../assets/tribes/charming.png"
+        },
+        {
+            "id": "heartful",
+            "names": {
+                "en" : { "display": "Heartful", "aliases": [] },
+                "fr" : { "display": "Bienveillants", "aliases": [] },
+                "jp" : { "display": "ポカポカ族", "aliases": ["Pokapoka-zoku"] }
+            },
+            "color": "#59B855",
+            "image": "../assets/tribes/heartful.png"
+        },
+       {
+            "id": "shady",
+            "names": {
+                "en" : { "display": "Shady", "aliases": [] },
+                "fr" : { "display": "Sombres", "aliases": [] },
+                "jp" : { "display": "ウスラカゲ族", "aliases": ["Usurakage-zoku"] }
+            },
+            "color": "#05ACE8",
+            "image": "../assets/tribes/shady.png"
+        },
+       {
+            "id": "eerie",
+            "names" : {
+                "en" : { "display": "Eerie", "aliases": [] },
+                "fr" : { "display": "Sinistres", "aliases": [] },
+                "jp" : { "display": "ブキミー族", "aliases": ["Bukimī-zoku"] }
+            },
+            "color": "#9E54A2",
+            "image": "../assets/tribes/eerie.png"
+        },
+        {
+            "id": "slippery",
+            "names" : {
+                "en" : { "display": "Slippery", "aliases": [] },
+                "fr" : { "display": "Insaisissables", "aliases": [] },
+                "jp" : { "display": "ニョロロン族", "aliases": ["Nyororon-zoku"] }
+            },
+            "color": "#4CC5E1",
+            "image": "../assets/tribes/slippery.png"
+        },
+        {
+            "id": "boss",
+            "names" : {
+                "en" : { "display": "Boss", "aliases": [] },
+                "fr" : { "display": "Boss", "aliases": [] },
+                "jp" : { "display": "ボス妖", "aliases": ["Bosu"] }
+            },
+            "color": "#272527",
+            "image": "../assets/tribes/boss.png"
+        },
+        {
+            "id": "wicked",
+            "names": {
+                "en" : { "display": "Wicked", "aliases": [] },
+                "fr" : { "display": "Perfides", "aliases": [] },
+                "jp" : { "display": "怪魔族", "aliases": ["Kaima-zoku"] }
+            },
+            "color": "#0C0E31",
+            "image": "../assets/tribes/wicked.png"
+        },
+        {
+            "id": "wandroid",
+            "names": {
+                "en" : { "display": "Wandroid", "aliases": [] },
+                "fr" : { "display": "Wandroïdes", "aliases": [] },
+                "jp" : { "display": "ハグレ族", "aliases": ["Hagure-zoku"] }
+            },
+            "color": "#16028A",
+            "image": "../assets/tribes/wandroid.png"
+        }
+    ]
 }

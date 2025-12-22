@@ -1,22 +1,49 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "definitions": {
-    "tribeId": {
-      "type": "string",
-      "enum": ["brave", "mysterious", "tough", "charming", "heartful", "shady", "eerie", "slippery", "boss", "wicked"]
+  "type": "object",
+  "required": ["tribes"],
+
+  "properties": {
+    "tribes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/tribe"
+      }
     }
   },
-  "type": "object",
-  "patternProperties": {
-    "^[a-z]+$": {
+
+  "definitions": {
+    "tribe" : {
       "type": "object",
-      "required": ["id", "name", "color", "image"],
+      "required": ["id", "names", "color", "image"],
       "properties": {
         "id": { "$ref": "#/definitions/tribeId" },
-        "name": { "type": "string" },
+        "names": { 
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/localizedName" }
+        },
         "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
         "image": { "type": "string" }
       }
+    },
+
+    "tribeId": {
+      "type": "string",
+      "enum": ["brave", "mysterious", "tough", "charming", "heartful", "shady", "eerie", "slippery", "boss", "wicked","wandroid"]
+    },
+
+    "localizedName": {
+      "type": "object",
+      "required": ["display", "aliases"],
+      "properties": {
+        "display": { "type": "string" },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
     }
+  
   }
 }
