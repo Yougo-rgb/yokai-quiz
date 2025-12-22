@@ -1,0 +1,20 @@
+{
+    "$schema": "./schemas/games.schema.json",
+
+    "ykw1": {
+        "id": "ykw1",
+        "name": "Yo-Kai Watch",
+        "image": "../assets/games/ykw1.png"
+    },
+    "ykw2": {
+        "id": "ykw2",
+        "name": "Yo-Kai Watch 2",
+        "image": "../assets/games/ykw2.png"
+    },
+    "ykw3": {
+        "id": "ykw3",
+        "name": "Yo-Kai Watch 3",
+        "image": "../assets/games/ykw3.png"
+    }
+
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["yokai"],
+
+  "properties": {
+    "yokai": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/yokai"
+      }
+    }
+  },
+
+  "definitions": {
+    "yokai": {
+      "type": "object",
+      "required": [
+        "id",
+        "image",
+        "tribe_id",
+        "rank_id",
+        "yokai_type",
+        "first_game_id",
+        "game_ids",
+        "names"
+      ],
+      "properties": {
+        "id": { "type": "integer", "minimum": 1 },
+        "image": { "type": "string" },
+        "tribe_id": { "$ref": "./tribes.schema.json#/definitions/tribeId" },
+        "rank_id": { "$ref": "./ranks.schema.json#/definitions/rankId" },
+        "yokai_type": { "enum": ["regular", "rare", "legendary"] },
+        "first_game_id": { "$ref": "./games.schema.json#/definitions/gameId" },
+        "game_ids": {
+          "type": "array",
+          "items": { "$ref": "./games.schema.json#/definitions/gameId" },
+          "minItems": 1
+        },
+        "names": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/localizedName"
+          }
+        }
+      }
+    },
+
+    "localizedName": {
+      "type": "object",
+      "required": ["display", "aliases"],
+      "properties": {
+        "display": { "type": "string" },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

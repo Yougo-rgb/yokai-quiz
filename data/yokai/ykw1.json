@@ -1,0 +1,47 @@
+{
+  "$schema": "../schemas/yokai.schema.json",
+  "yokai": [
+    {
+      "id": 1,
+      "image": "../../assets/yokai/pandle.png",
+      "tribe_id": "brave",
+      "rank_id": "e",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": ["ykw1", "ykw2", "ykw3"],
+      "names": {
+        "en": { "display": "Pandle", "aliases": [] },
+        "fr": { "display": "Woko", "aliases": [] },
+        "jp": { "display": "ぶようじん坊", "aliases": ["Buyoujinbou"] }
+      }
+    },
+    {
+      "id": 2,
+      "image": "../../assets/yokai/undy.png",
+      "tribe_id": "brave",
+      "rank_id": "c",
+      "yokai_type": "regular",
+      "first_game_id": "ykw1",
+      "game_ids": ["ykw1", "ykw2", "ykw3"],
+      "names": {
+        "en": { "display": "Undy", "aliases": [] },
+        "fr": { "display": "Pagno", "aliases": [] },
+        "jp": { "display": "がらあきん坊", "aliases": ["Garaakinbou"] }
+      }
+    },
+    {
+      "id": 3,
+      "image": "../../assets/yokai/tanbo.png",
+      "tribe_id": "brave",
+      "rank_id": "b",
+      "yokai_type": "rare",
+      "first_game_id": "ykw1",
+      "game_ids": ["ykw1", "ykw2", "ykw3"],
+      "names": {
+        "en": { "display": "Tanbo", "aliases": [] },
+        "fr": { "display": "Alfoncéo", "aliases": [] },
+        "jp": { "display": "さきがけの助", "aliases": ["Sakigakenosuke"] }
+      }
+    }
+  ]
+}

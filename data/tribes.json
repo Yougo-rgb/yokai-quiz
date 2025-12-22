@@ -1,0 +1,64 @@
+{
+    "$schema": "./schemas/tribes.schema.json",
+    
+    "brave": {
+        "id": "brave",
+        "name": "Brave",
+        "color": "#ED4122",
+        "image": "../assets/tribes/brave.png"
+    },
+    "mysterious": {
+        "id": "mysterious",
+        "name": "Mysterious",
+        "color": "#FEF006",
+        "image": "../assets/tribes/mysterious.png"
+    },
+    "tough": {
+        "id": "tough",
+        "name": "Tough",
+        "color": "#F58144",
+        "image": "../assets/tribes/tough.png"
+    },
+    "charming": {
+        "id": "charming",
+        "name": "Charming",
+        "color": "#F359A1",
+        "image": "../assets/tribes/charming.png"
+    },
+    "heartful": {
+        "id": "heartful",
+        "name": "Heartful",
+        "color": "#59B855",
+        "image": "../assets/tribes/heartful.png"
+    },
+    "shady": {
+        "id": "shady",
+        "name": "Shady",
+        "color": "#05ACE8",
+        "image": "../assets/tribes/shady.png"
+    },
+    "eerie": {
+        "id": "eerie",
+        "name": "Eerie",
+        "color": "#9E54A2",
+        "image": "../assets/tribes/eerie.png"
+    },
+    "slippery": {
+        "id": "slippery",
+        "name": "Slippery",
+        "color": "#4CC5E1",
+        "image": "../assets/tribes/slippery.png"
+    },
+    "boss": {
+        "id": "boss",
+        "name": "Boss",
+        "color": "#272527",
+        "image": "../assets/tribes/boss.png"
+    },
+    "wicked": {
+        "id": "wicked",
+        "name": "Wicked",
+        "color": "#0C0E31",
+        "image": "../assets/tribes/wicked.png"
+    }
+}

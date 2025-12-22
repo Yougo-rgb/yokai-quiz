@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "tribeId": {
+      "type": "string",
+      "enum": ["brave", "mysterious", "tough", "charming", "heartful", "shady", "eerie", "slippery", "boss", "wicked"]
+    }
+  },
+  "type": "object",
+  "patternProperties": {
+    "^[a-z]+$": {
+      "type": "object",
+      "required": ["id", "name", "color", "image"],
+      "properties": {
+        "id": { "$ref": "#/definitions/tribeId" },
+        "name": { "type": "string" },
+        "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "image": { "type": "string" }
+      }
+    }
+  }
+}
