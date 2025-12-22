@@ -1,0 +1,23 @@
+/* Light mode by default */
+:root {
+    --bg-color: #4F9ACC;
+    --text-color: #000000;
+    --primary-color: #f359a1;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+    --bg-color: #6738A5;
+    --text-color: #ffffff;
+    --primary-color: #EACA43;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(var(--text-color));
+}

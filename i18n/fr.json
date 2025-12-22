@@ -3,6 +3,7 @@
         "title": "Quiz Yo-kai Watch",
         "labelLangueSelection": "Langue",
         "optionFrench": "Français",
-        "optionEnglish": "Englais"
+        "optionEnglish": "Englais",
+        "toggleTheme": "Changer de thème"
     }
 }
