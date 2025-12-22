@@ -1,4 +1,4 @@
-import { loadLang, applyTranslations } from "./src/i18n.js";
+import { loadLang, applyTranslations } from "./i18n.js";
 
 /* Language handling */
 const select = document.getElementById("lang-select");

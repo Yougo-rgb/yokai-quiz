@@ -3,6 +3,8 @@
     --bg-color: #4F9ACC;
     --text-color: #000000;
     --primary-color: #f359a1;
+    --button-color: #DDD9F1;
+    --button-radius: 0 0 10px 10px;
 }
 
 /* Dark mode */
@@ -10,6 +12,7 @@
     --bg-color: #6738A5;
     --text-color: #ffffff;
     --primary-color: #EACA43;
+    --button-color: #DDD9F1;
 }
 
 body {
@@ -17,7 +20,40 @@ body {
     color: var(--text-color);
 }
 
+.header {
+    position: fixed;
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.header > * {
+    border-radius: var(--button-radius);
+    background-color: var(--button-color);
+    padding: 5px;
+    border: #000000 solid 1px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: inherit;
+    font-family: inherit;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
 button {
-    background-color: var(--primary-color);
-    color: var(var(--text-color));
+    background-color: var(--button-color);
+    color: var(--text-color);
 }

@@ -32,4 +32,12 @@ export function applyTranslations() {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         el.textContent = t(el.dataset.i18n);
     });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        el.placeholder = t(el.dataset.i18nPlaceholder);
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+        el.placeholder = t(el.dataset.i18nPlaceholder);
+    });
 }

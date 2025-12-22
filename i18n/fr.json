@@ -4,6 +4,8 @@
         "labelLangueSelection": "Langue",
         "optionFrench": "Français",
         "optionEnglish": "Englais",
-        "toggleTheme": "Changer de thème"
+        "toggleTheme": "Changer de thème",
+        "timer": "Timer",
+        "inputPlaceholder": "Yo-kai"
     }
 }
