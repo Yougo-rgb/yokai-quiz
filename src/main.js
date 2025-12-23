@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const startBtn = document.getElementById("start-game");
     const resetBtn = document.getElementById("reset-game");
     const closeBtn = document.getElementById("close-modal");
+    const yokaiContent = document.getElementById("yokai-content");
 
     startBtn.addEventListener("click", () => {
         modal.style.display = "flex";
@@ -40,9 +41,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         resetGame();
     });
 
+    let isGameStart = false;
+
     /* Fetch yokai data once */
     let allYokai = [];
-    let yokai = [];
+    let yokais = [];
     async function loadYokaiOnce() {
         const res_yokai = await fetch("../data/yokai/ykw1.json");
         const data_yokai = await res_yokai.json()
@@ -69,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         allBtn.dataset.tribe = "all";
         allBtn.textContent = t("quiz.modeAll") || "All";
         allBtn.addEventListener("click", () => {
-            yokai = allYokai;
+            yokais = allYokai;
             startGame();
         });
         modeContainer.appendChild(allBtn);
@@ -81,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             btn.dataset.game = game.id;
             btn.textContent = game.names[lang].display;
             btn.addEventListener("click", () => {
-                yokai = filterYokaiByGame(game.id);
+                yokais = filterYokaiByGame(game.id);
                 startGame();
             })
             modeContainer.appendChild(btn);
@@ -94,7 +97,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             btn.dataset.tribe = tribe.id;
             btn.textContent = tribe.names[lang].display;
             btn.addEventListener("click", () => {
-                yokai = filterYokaiByTribe(tribe.id);
+                yokais = filterYokaiByTribe(tribe.id);
                 startGame();
             });
             modeContainer.appendChild(btn);
@@ -118,20 +121,57 @@ document.addEventListener("DOMContentLoaded", async () => {
         return allYokai.filter(y => y.game_ids.includes(id));
     }
 
+    /* Display yokai on yokai-content */
+    function displayYokai(lang) {
+        yokaiContent.innerHTML = '';
+
+        yokais.forEach(yokai => {
+            const el = document.createElement("span");
+            el.classList.add("yokai-badge");
+            el.dataset.yokai = yokai.id;
+
+            const img = document.createElement("img");
+            img.src = yokai.image;
+            img.alt = yokai.names[lang].display;
+            img.title = yokai.names[lang].display;
+            img.style.width = "50px";
+            img.style.height = "50px";
+            img.style.objectFit = "cover";
+            img.style.borderRadius = "50%";
+
+            // el.textContent = yokai.names[lang].display;
+            el.appendChild(img);
+            yokaiContent.appendChild(el);
+        })
+    }
+
+    /* Clear yokai-content */
+    function clearYokai() {
+        yokaiContent.innerHTML = '';
+    }
+
     /* Start a game with the filtered yokai array*/
     function startGame() {
+        isGameStart = true;
         modal.style.display = "none";
         startBtn.style.display = "none";
         resetBtn.style.display = "block";
-        console.log(yokai);
+        yokaiContent.style.display = "grid";
+        console.log(yokais);
+
+        displayYokai(savedLang);
     }
 
     /* Reset game */
     function resetGame() {
+        isGameStart = false;
         startBtn.style.display = "block";
         resetBtn.style.display = "none";
-        yokai = [];
-        console.log(yokai);
+        yokaiContent.style.display = "none";
+        yokais = [];
+        console.log(yokais);
+
+        clearYokai();
     }
 
     // Initial population and yokai load
@@ -146,5 +186,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         localStorage.setItem("lang", lang);
 
         populateGameModeButton(lang);
+        if (isGameStart) {
+            clearYokai();
+            displayYokai(lang);
+        }
     });
 });
