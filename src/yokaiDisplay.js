@@ -8,8 +8,8 @@ export function displayYokai(container, yokais, lang) {
 
         const img = document.createElement("img");
         img.src = "../assets/ui/interogation.png";
-        img.alt = yokai.names[lang].display;
-        img.title = yokai.names[lang].display;
+        // img.alt = yokai.names[lang].display;
+        // img.title = yokai.names[lang].display;
         img.style.width = "50px";
         img.style.height = "50px";
         img.style.objectFit = "cover";

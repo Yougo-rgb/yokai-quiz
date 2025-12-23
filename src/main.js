@@ -10,6 +10,8 @@ import {
 
 import { displayYokai, clearYokai } from "./yokaiDisplay.js";
 
+import { findYokaiByInput, updateScore, resetScore } from "./game.js";
+
 document.addEventListener("DOMContentLoaded", async () => {
 
     /* DOM */
@@ -42,6 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let isGameStart = false;
     let allYokai = [];
     let yokais = [];
+    let foundYokai = [];
 
     /* Init modal */
     initModal({
@@ -108,8 +111,28 @@ document.addEventListener("DOMContentLoaded", async () => {
         timerOutput.style.display = "flex";
         scoreOutput.style.display = "flex";
         gameModeText.style.display = "block";
+        yokaiNameInput.value = "";
+
+        foundYokai = [];
+        resetScore(yokais.length, scoreOutput);
 
         displayYokai(yokaiContent, yokais, savedLang);
+
+        yokaiNameInput.addEventListener("input", () => {
+            const matched = findYokaiByInput(yokaiNameInput.value, yokais);
+            if (matched) {
+                if (!foundYokai.includes(matched.id)) {
+                    console.log("Yokai :", matched);
+                    foundYokai.push(matched.id);
+                    // Show image
+                    console.log(foundYokai)
+                    updateScore(yokais.length, foundYokai.length, scoreOutput);
+                } else {
+                    console.log("Yokai ", matched.names[savedLang].display, "already foound");
+                }
+                yokaiNameInput.value = "";
+            }
+        })
     }
 
     function resetGame() {
@@ -121,8 +144,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         timerOutput.style.display = "none";
         scoreOutput.style.display = "none";
         gameModeText.style.display = "none";
+        yokaiNameInput.value = "";
         yokais = [];
+        foundYokai = [];
         clearYokai(yokaiContent);
+        resetScore(0, scoreOutput);
     }
 
     populateGameModeButton(savedLang);
