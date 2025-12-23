@@ -24,8 +24,8 @@ import {
 document.addEventListener("DOMContentLoaded", async () => {
 
     /* DOM */
-    const select = document.getElementById("lang-select");
-    const toggle = document.getElementById("theme-toggle");
+    const LangSelect = document.getElementById("lang-select");
+    const ThemeToggle = document.getElementById("theme-toggle");
     const modal = document.getElementById("game-modal");
     const modeContainer = modal.querySelector(".mode-buttons");
     const startBtn = document.getElementById("start-game");
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const gameModeText = document.getElementById("game-mode-text");
 
     /* Init language */
-    let savedLang = await initLanguage(select, (lang) => {
+    let savedLang = await initLanguage(LangSelect, (lang) => {
         populateGameModeButton(lang);
         if (isGameStart) {
             clearYokai(yokaiContent);
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     /* Init theme */
-    initTheme(toggle);
+    initTheme(ThemeToggle);
 
     /* Game state */
     let isGameStart = false;
@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         scoreOutput.style.display = "flex";
         gameModeText.style.display = "block";
         yokaiNameInput.value = "";
+        LangSelect.style.display = "none";
 
         foundYokai = [];
         yokaiNameInput.focus();
@@ -136,19 +137,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         displayYokai(yokaiContent, yokais, savedLang);
 
         yokaiNameInput.addEventListener("input", () => {
-            const matched = findYokaiByInput(yokaiNameInput.value, yokais);
-            if (matched) {
-                if (!foundYokai.includes(matched.id)) {
+            const matchedYokais = findYokaiByInput(yokaiNameInput.value, yokais, savedLang);
+            
+            matchedYokais.forEach(matched => {
+            if (!foundYokai.includes(matched.id)) {
                     console.log("Yokai :", matched);
                     foundYokai.push(matched.id);
-                    revealYokai(matched, savedLang);
                     console.log(foundYokai)
                     updateScore(yokais.length, foundYokai.length, scoreOutput);
                 } else {
-                    console.log("Yokai ", matched.names[savedLang].display, "already foound");
+                    console.log("Yokai", matched.names[savedLang].display, "already found");
                 }
                 yokaiNameInput.value = "";
-            }
+            });
 
             if (foundYokai.length === yokais.length) {
                 stopTimer();
@@ -166,6 +167,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         scoreOutput.style.display = "none";
         gameModeText.style.display = "none";
         yokaiNameInput.value = "";
+        LangSelect.style.display = "flex";
         yokais = [];
         foundYokai = [];
         clearYokai(yokaiContent);

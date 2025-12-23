@@ -1,21 +1,34 @@
-export function findYokaiByInput(inputText, yokais) {
-    const text = inputText.trim().toLowerCase();
+export function findYokaiByInput(inputText, yokais, lang) {
+    const text = inputText.toLowerCase().replace(/[\s.-]/g, "");
+    const matched = [];
 
-    return yokais.find(yokai => {
-        return Object.values(yokai.names).some(langObj => {
-            const namesToCheck = [langObj.display, ...(langObj.aliases || [])];
-            return namesToCheck.some(name => name.toLowerCase() === text);
+    yokais.forEach(yokai => {
+        const langs = Object.keys(yokai.names);
+
+        langs.forEach(l => {
+            const namesToCheck = [yokai.names[l].display, ...(yokai.names[l].aliases || [])];
+
+            namesToCheck.forEach(name => {
+                const normalizedName = name.toLowerCase().replace(/[\s.-]/g, "");
+                if (normalizedName === text) {
+                    matched.push(yokai);
+                    revealYokai(yokai, lang);
+                }
+            });
         });
     });
+    return matched;
 }
 
 export function revealYokai(yokai, lang) {
-    const el = document.querySelector(`.yokai-badge[data-yokai="${yokai.id}"]`);
-    if (!el) return;
-
-    const img = el.querySelector("img");
-    img.src = yokai.image;
-    img.alt = yokai.names[lang].display;
+    const els = document.querySelectorAll(`.yokai-badge[data-yokai="${yokai.id}"]`);
+    els.forEach(el => {
+        const img = el.querySelector("img");
+        if (!img) return;
+        img.src = yokai.image;
+        img.alt = yokai.names[lang].display;
+        img.title = yokai.names[lang].display;
+    });
 }
 
 export function updateScore(total, actual, scoreOutput) {
