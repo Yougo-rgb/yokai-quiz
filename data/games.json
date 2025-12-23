@@ -1,20 +1,35 @@
 {
-    "$schema": "./schemas/games.schema.json",
-
-    "ykw1": {
-        "id": "ykw1",
-        "name": "Yo-Kai Watch",
-        "image": "../assets/games/ykw1.png"
+  "$schema": "./schemas/games.schema.json",
+  "games": [
+    {
+      "id": "ykw1",
+      "names": {
+        "en": { "display": "Yo-kai Watch", "aliases": [] },
+        "fr": { "display": "Yo-kai Watch", "aliases": [] },
+        "jp": { "display": "妖怪ウォッチ", "aliases": ["Yōkai Watch"] }
+      },
+      "generation": 1,
+      "image": "../assets/games/ykw1.png"
     },
-    "ykw2": {
-        "id": "ykw2",
-        "name": "Yo-Kai Watch 2",
-        "image": "../assets/games/ykw2.png"
+    {
+      "id": "ykw2",
+      "names": {
+        "en": { "display": "Yo-kai Watch 2", "aliases": [] },
+        "fr": { "display": "Yo-kai Watch 2", "aliases": [] },
+        "jp": { "display": "妖怪ウォッチ2", "aliases": ["Yōkai Watch 2"] }
+      },
+      "generation": 2,
+      "image": "../assets/games/ykw2.png"
     },
-    "ykw3": {
-        "id": "ykw3",
-        "name": "Yo-Kai Watch 3",
-        "image": "../assets/games/ykw3.png"
+    {
+      "id": "ykw3",
+      "names": {
+        "en": { "display": "Yo-kai Watch 3", "aliases": [] },
+        "fr": { "display": "Yo-kai Watch 3", "aliases": [] },
+        "jp": { "display": "妖怪ウォッチ3", "aliases": ["Yōkai Watch 3"] }
+      },
+      "generation": 3,
+      "image": "../assets/games/ykw3.png"
     }
-
+  ]
 }

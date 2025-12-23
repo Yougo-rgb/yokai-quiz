@@ -37,12 +37,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     /* Fetch tribes data once */
-    const res = await fetch("../data/tribes.json");
-    const data = await res.json();
-    const tribes = data.tribes;
+    const res_tribes = await fetch("../data/tribes.json");
+    const data_tribes = await res_tribes.json();
+    const tribes = data_tribes.tribes;
 
-    /* Function to populate tribe buttons */
-    function populateTribes(lang) {
+    /* Fetch Games data once  */
+    const res_games = await fetch("../data/games.json");
+    const data_games = await res_games.json();
+    const games = data_games.games;
+
+    /* Function to populate tribe and game buttons */
+    function populateButton(lang) {
         modeContainer.innerHTML = '';
 
         // Add the "All" button
@@ -55,6 +60,19 @@ document.addEventListener("DOMContentLoaded", async () => {
             modal.style.display = "none";
         });
         modeContainer.appendChild(allBtn);
+        
+        // Add buttons for each game
+        games.forEach(game => {
+            const btn = document.createElement("button");
+            btn.classList.add("mode-btn");
+            btn.dataset.game = game.id;
+            btn.textContent = game.names[lang].display;
+            btn.addEventListener("click", () => {
+                console.log("Selected :", game.id);
+                modal.style.display = "none";
+            })
+            modeContainer.appendChild(btn);
+        })
 
         // Add buttons for each tribe
         tribes.forEach(tribe => {
@@ -71,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Initial population
-    populateTribes(savedLang);
+    populateButton(savedLang);
 
     // Update buttons when language changes
     select.addEventListener("change", async () => {
@@ -80,6 +98,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         applyTranslations();
         localStorage.setItem("lang", lang);
 
-        populateTribes(lang);
+        populateButton(lang);
     });
 });
