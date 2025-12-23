@@ -9,6 +9,7 @@
         "inputPlaceholder": "Yo-Kai",
         "selectGameMode": "Select Game Mode",
         "modeAll": "All",
-        "startGame": "Start Game"
+        "startGame": "Start Game",
+        "resetGame": "Reset Game"
     }
 }

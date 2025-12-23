@@ -68,7 +68,8 @@ button {
     color: var(--text-color);
 }
 
-#start-game {
+#start-game,
+#reset-game {
     color: #000;
     padding: 5px;
     align-items: center;
@@ -78,7 +79,15 @@ button {
     font-family: inherit;
     border-radius: 10px 10px 0 0;
     margin: 0 auto;
+
+}
+
+#start-game {
     display: block;
+}
+
+#reset-game {
+    display: none;
 
 }
 

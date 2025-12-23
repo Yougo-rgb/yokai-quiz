@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const modal = document.getElementById("game-modal");
     const modeContainer = modal.querySelector(".mode-buttons");
     const startBtn = document.getElementById("start-game");
+    const resetBtn = document.getElementById("reset-game");
     const closeBtn = document.getElementById("close-modal");
 
     startBtn.addEventListener("click", () => {
@@ -35,6 +36,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
     });
+    resetBtn.addEventListener("click", () => {
+        resetGame();
+    });
+
+    /* Fetch yokai data once */
+    let allYokai = [];
+    let yokai = [];
+    async function loadYokaiOnce() {
+        const res_yokai = await fetch("../data/yokai/ykw1.json");
+        const data_yokai = await res_yokai.json()
+        allYokai = data_yokai.yokai;
+    }
 
     /* Fetch tribes data once */
     const res_tribes = await fetch("../data/tribes.json");
@@ -47,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const games = data_games.games;
 
     /* Function to populate tribe and game buttons */
-    function populateButton(lang) {
+    function populateGameModeButton(lang) {
         modeContainer.innerHTML = '';
 
         // Add the "All" button
@@ -56,8 +69,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         allBtn.dataset.tribe = "all";
         allBtn.textContent = t("quiz.modeAll") || "All";
         allBtn.addEventListener("click", () => {
-            console.log("Selected tribe: all");
-            modal.style.display = "none";
+            yokai = allYokai;
+            startGame();
         });
         modeContainer.appendChild(allBtn);
         
@@ -68,8 +81,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             btn.dataset.game = game.id;
             btn.textContent = game.names[lang].display;
             btn.addEventListener("click", () => {
-                console.log("Selected :", game.id);
-                modal.style.display = "none";
+                yokai = filterYokaiByGame(game.id);
+                startGame();
             })
             modeContainer.appendChild(btn);
         })
@@ -81,15 +94,49 @@ document.addEventListener("DOMContentLoaded", async () => {
             btn.dataset.tribe = tribe.id;
             btn.textContent = tribe.names[lang].display;
             btn.addEventListener("click", () => {
-                console.log("Selected :", tribe.id);
-                modal.style.display = "none";
+                yokai = filterYokaiByTribe(tribe.id);
+                startGame();
             });
             modeContainer.appendChild(btn);
         });
     }
 
-    // Initial population
-    populateButton(savedLang);
+    /* Filter allYokai */
+    function filterYokaiByTribe(id) {
+        return allYokai.filter(y => y.tribe_id === id);
+    }
+    function filterYokaiByRank(id) {
+        return allYokai.filter(y => y.rank_id === id);
+    }
+    function filterYokaiByYokaiType(id) {
+        return allYokai.filter(y => y.yokai_type === id);
+    }
+    function filterYokaiByFirstGame(id) {
+        return allYokai.filter(y => y.first_game_id === id);
+    }
+    function filterYokaiByGame(id) {
+        return allYokai.filter(y => y.game_ids.includes(id));
+    }
+
+    /* Start a game with the filtered yokai array*/
+    function startGame() {
+        modal.style.display = "none";
+        startBtn.style.display = "none";
+        resetBtn.style.display = "block";
+        console.log(yokai);
+    }
+
+    /* Reset game */
+    function resetGame() {
+        startBtn.style.display = "block";
+        resetBtn.style.display = "none";
+        yokai = [];
+        console.log(yokai);
+    }
+
+    // Initial population and yokai load
+    await loadYokaiOnce();
+    populateGameModeButton(savedLang);
 
     // Update buttons when language changes
     select.addEventListener("change", async () => {
@@ -98,6 +145,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         applyTranslations();
         localStorage.setItem("lang", lang);
 
-        populateButton(lang);
+        populateGameModeButton(lang);
     });
 });

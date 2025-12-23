@@ -9,6 +9,7 @@
         "inputPlaceholder": "Yo-kai",
         "selectGameMode": "Selection du mode de jeu",
         "modeAll": "Tous",
-        "startGame": "Commencer la partie"
+        "startGame": "Commencer la partie",
+        "resetGame": "Arrêter la partie"
     }
 }
