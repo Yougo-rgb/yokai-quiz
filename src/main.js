@@ -10,7 +10,15 @@ import {
 
 import { displayYokai, clearYokai } from "./yokaiDisplay.js";
 
-import { findYokaiByInput, updateScore, resetScore } from "./game.js";
+import { 
+    findYokaiByInput, 
+    updateScore, 
+    resetScore, 
+    initTimer, 
+    startTimer, 
+    stopTimer, 
+    resetTimer 
+} from "./game.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -45,6 +53,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     let allYokai = [];
     let yokais = [];
     let foundYokai = [];
+    let startTime = null;
+    let timerId = null;
 
     /* Init modal */
     initModal({
@@ -54,6 +64,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         resetBtn,
         onReset: resetGame
     });
+
+    /* Init Timer */
+    initTimer(timerOutput);
 
     /* Load yokai */
     const res = await fetch("../data/yokai/ykw1.json");
@@ -114,7 +127,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         yokaiNameInput.value = "";
 
         foundYokai = [];
+        yokaiNameInput.focus();
+        yokaiNameInput.select();
         resetScore(yokais.length, scoreOutput);
+        startTimer();
 
         displayYokai(yokaiContent, yokais, savedLang);
 
@@ -131,6 +147,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                     console.log("Yokai ", matched.names[savedLang].display, "already foound");
                 }
                 yokaiNameInput.value = "";
+            }
+
+            if (foundYokai.length === yokais.length) {
+                stopTimer();
             }
         })
     }
@@ -149,6 +169,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         foundYokai = [];
         clearYokai(yokaiContent);
         resetScore(0, scoreOutput);
+        stopTimer();
+        resetTimer();
     }
 
     populateGameModeButton(savedLang);
