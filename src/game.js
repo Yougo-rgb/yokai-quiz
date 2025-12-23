@@ -9,6 +9,15 @@ export function findYokaiByInput(inputText, yokais) {
     });
 }
 
+export function revealYokai(yokai, lang) {
+    const el = document.querySelector(`.yokai-badge[data-yokai="${yokai.id}"]`);
+    if (!el) return;
+
+    const img = el.querySelector("img");
+    img.src = yokai.image;
+    img.alt = yokai.names[lang].display;
+}
+
 export function updateScore(total, actual, scoreOutput) {
     scoreOutput.textContent = actual + " / " + total;
 }
@@ -27,7 +36,7 @@ export function initTimer(outputElement) {
 }
 
 export function startTimer() {
-    if (timerId !== null) return; // évite double timer
+    if (timerId !== null) return;
 
     startTime = performance.now();
     timerId = requestAnimationFrame(updateTimer);

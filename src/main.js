@@ -12,6 +12,7 @@ import { displayYokai, clearYokai } from "./yokaiDisplay.js";
 
 import { 
     findYokaiByInput, 
+    revealYokai,
     updateScore, 
     resetScore, 
     initTimer, 
@@ -140,7 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (!foundYokai.includes(matched.id)) {
                     console.log("Yokai :", matched);
                     foundYokai.push(matched.id);
-                    // Show image
+                    revealYokai(matched, savedLang);
                     console.log(foundYokai)
                     updateScore(yokais.length, foundYokai.length, scoreOutput);
                 } else {
