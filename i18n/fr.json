@@ -10,6 +10,7 @@
         "selectGameMode": "Selection du mode de jeu",
         "modeAll": "Tous",
         "startGame": "Commencer la partie",
-        "resetGame": "Arrêter la partie"
+        "resetGame": "Arrêter la partie",
+        "gameModeText": "Mode : "
     }
 }

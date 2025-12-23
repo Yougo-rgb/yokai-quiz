@@ -10,6 +10,7 @@
         "selectGameMode": "Select Game Mode",
         "modeAll": "All",
         "startGame": "Start Game",
-        "resetGame": "Reset Game"
+        "resetGame": "Reset Game",
+        "gameModeText": "Mode : "
     }
 }

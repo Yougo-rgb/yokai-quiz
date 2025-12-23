@@ -178,3 +178,14 @@ button {
 .yokai-badge:hover {
     transform: scale(1.1);
 }
+
+#yo-kai-name,
+#timer,
+#score {
+    display: none;
+}
+
+.game-mode-text {
+    display: none;
+    text-align: center;
+}

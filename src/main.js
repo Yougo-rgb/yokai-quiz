@@ -1,194 +1,129 @@
-import { loadLang, applyTranslations, t } from "./i18n.js";
+import { t } from "./i18n.js";
+import { initLanguage } from "./lang.js";
+import { initTheme } from "./theme.js";
+import { initModal } from "./modal.js";
+
+import {
+    filterYokaiByTribe,
+    filterYokaiByGame
+} from "./yokaiFilters.js";
+
+import { displayYokai, clearYokai } from "./yokaiDisplay.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    /* Language handling */
+
+    /* DOM */
     const select = document.getElementById("lang-select");
-    let savedLang = localStorage.getItem("lang") || "en";
-    await loadLang(savedLang);
-    applyTranslations();
-    select.value = savedLang;
-
-    /* Theme handling */
     const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-        const currentTheme = document.documentElement.getAttribute("data-theme");
-        if (currentTheme === "dark") {
-            document.documentElement.setAttribute("data-theme", "light");
-            localStorage.setItem("theme", "light");
-        } else {
-            document.documentElement.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-        }
-    });
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
-
-    /* Modal handling */
     const modal = document.getElementById("game-modal");
     const modeContainer = modal.querySelector(".mode-buttons");
     const startBtn = document.getElementById("start-game");
     const resetBtn = document.getElementById("reset-game");
     const closeBtn = document.getElementById("close-modal");
     const yokaiContent = document.getElementById("yokai-content");
+    const yokaiNameInput = document.getElementById("yo-kai-name");
+    const timerOutput = document.getElementById("timer");
+    const scoreOutput = document.getElementById("score");
+    const gameModeText = document.getElementById("game-mode-text");
 
-    startBtn.addEventListener("click", () => {
-        modal.style.display = "flex";
-    });
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-    resetBtn.addEventListener("click", () => {
-        resetGame();
+    /* Init language */
+    let savedLang = await initLanguage(select, (lang) => {
+        populateGameModeButton(lang);
+        if (isGameStart) {
+            clearYokai(yokaiContent);
+            displayYokai(yokaiContent, yokais, lang);
+        }
     });
 
+    /* Init theme */
+    initTheme(toggle);
+
+    /* Game state */
     let isGameStart = false;
-
-    /* Fetch yokai data once */
     let allYokai = [];
     let yokais = [];
-    async function loadYokaiOnce() {
-        const res_yokai = await fetch("../data/yokai/ykw1.json");
-        const data_yokai = await res_yokai.json()
-        allYokai = data_yokai.yokai;
-    }
 
-    /* Fetch tribes data once */
-    const res_tribes = await fetch("../data/tribes.json");
-    const data_tribes = await res_tribes.json();
-    const tribes = data_tribes.tribes;
+    /* Init modal */
+    initModal({
+        modal,
+        startBtn,
+        closeBtn,
+        resetBtn,
+        onReset: resetGame
+    });
 
-    /* Fetch Games data once  */
-    const res_games = await fetch("../data/games.json");
-    const data_games = await res_games.json();
-    const games = data_games.games;
+    /* Load yokai */
+    const res = await fetch("../data/yokai/ykw1.json");
+    allYokai = (await res.json()).yokai;
 
-    /* Function to populate tribe and game buttons */
+    /* Data */
+    const tribes = (await (await fetch("../data/tribes.json")).json()).tribes;
+    const games = (await (await fetch("../data/games.json")).json()).games;
+
     function populateGameModeButton(lang) {
-        modeContainer.innerHTML = '';
+        modeContainer.innerHTML = "";
 
-        // Add the "All" button
         const allBtn = document.createElement("button");
         allBtn.classList.add("mode-btn");
-        allBtn.dataset.tribe = "all";
         allBtn.textContent = t("quiz.modeAll") || "All";
-        allBtn.addEventListener("click", () => {
+        allBtn.onclick = () => {
             yokais = allYokai;
+            gameModeText.textContent = t("quiz.modeAll") || "All"
             startGame();
-        });
+        };
         modeContainer.appendChild(allBtn);
-        
-        // Add buttons for each game
+
         games.forEach(game => {
             const btn = document.createElement("button");
             btn.classList.add("mode-btn");
-            btn.dataset.game = game.id;
             btn.textContent = game.names[lang].display;
-            btn.addEventListener("click", () => {
-                yokais = filterYokaiByGame(game.id);
+            btn.onclick = () => {
+                yokais = filterYokaiByGame(allYokai, game.id);
+                gameModeText.textContent = game.names[lang].display
                 startGame();
-            })
+            };
             modeContainer.appendChild(btn);
-        })
+        });
 
-        // Add buttons for each tribe
         tribes.forEach(tribe => {
             const btn = document.createElement("button");
             btn.classList.add("mode-btn");
-            btn.dataset.tribe = tribe.id;
             btn.textContent = tribe.names[lang].display;
-            btn.addEventListener("click", () => {
-                yokais = filterYokaiByTribe(tribe.id);
+            btn.onclick = () => {
+                yokais = filterYokaiByTribe(allYokai, tribe.id);
+                gameModeText.textContent = tribe.names[lang].display
                 startGame();
-            });
+            };
             modeContainer.appendChild(btn);
         });
     }
 
-    /* Filter allYokai */
-    function filterYokaiByTribe(id) {
-        return allYokai.filter(y => y.tribe_id === id);
-    }
-    function filterYokaiByRank(id) {
-        return allYokai.filter(y => y.rank_id === id);
-    }
-    function filterYokaiByYokaiType(id) {
-        return allYokai.filter(y => y.yokai_type === id);
-    }
-    function filterYokaiByFirstGame(id) {
-        return allYokai.filter(y => y.first_game_id === id);
-    }
-    function filterYokaiByGame(id) {
-        return allYokai.filter(y => y.game_ids.includes(id));
-    }
-
-    /* Display yokai on yokai-content */
-    function displayYokai(lang) {
-        yokaiContent.innerHTML = '';
-
-        yokais.forEach(yokai => {
-            const el = document.createElement("span");
-            el.classList.add("yokai-badge");
-            el.dataset.yokai = yokai.id;
-
-            const img = document.createElement("img");
-            img.src = yokai.image;
-            img.alt = yokai.names[lang].display;
-            img.title = yokai.names[lang].display;
-            img.style.width = "50px";
-            img.style.height = "50px";
-            img.style.objectFit = "cover";
-            img.style.borderRadius = "50%";
-
-            // el.textContent = yokai.names[lang].display;
-            el.appendChild(img);
-            yokaiContent.appendChild(el);
-        })
-    }
-
-    /* Clear yokai-content */
-    function clearYokai() {
-        yokaiContent.innerHTML = '';
-    }
-
-    /* Start a game with the filtered yokai array*/
     function startGame() {
         isGameStart = true;
         modal.style.display = "none";
         startBtn.style.display = "none";
         resetBtn.style.display = "block";
         yokaiContent.style.display = "grid";
-        console.log(yokais);
+        yokaiNameInput.style.display = "flex";
+        timerOutput.style.display = "flex";
+        scoreOutput.style.display = "flex";
+        gameModeText.style.display = "block";
 
-        displayYokai(savedLang);
+        displayYokai(yokaiContent, yokais, savedLang);
     }
 
-    /* Reset game */
     function resetGame() {
         isGameStart = false;
         startBtn.style.display = "block";
         resetBtn.style.display = "none";
         yokaiContent.style.display = "none";
+        yokaiNameInput.style.display = "none";
+        timerOutput.style.display = "none";
+        scoreOutput.style.display = "none";
+        gameModeText.style.display = "none";
         yokais = [];
-        console.log(yokais);
-
-        clearYokai();
+        clearYokai(yokaiContent);
     }
 
-    // Initial population and yokai load
-    await loadYokaiOnce();
     populateGameModeButton(savedLang);
-
-    // Update buttons when language changes
-    select.addEventListener("change", async () => {
-        const lang = select.value;
-        await loadLang(lang);
-        applyTranslations();
-        localStorage.setItem("lang", lang);
-
-        populateGameModeButton(lang);
-        if (isGameStart) {
-            clearYokai();
-            displayYokai(lang);
-        }
-    });
 });
