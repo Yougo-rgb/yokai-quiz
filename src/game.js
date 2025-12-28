@@ -1,5 +1,5 @@
 export function findYokaiByInput(inputText, yokais, lang) {
-    const text = inputText.toLowerCase().replace(/[\s.-]/g, "");
+    const text = inputText.toLowerCase().replace(/[\s.\-']/g, "")
     const matched = [];
 
     yokais.forEach(yokai => {
@@ -9,7 +9,7 @@ export function findYokaiByInput(inputText, yokais, lang) {
             const namesToCheck = [yokai.names[l].display, ...(yokai.names[l].aliases || [])];
 
             namesToCheck.forEach(name => {
-                const normalizedName = name.toLowerCase().replace(/[\s.-]/g, "");
+                const normalizedName = name.toLowerCase().replace(/[\s.\-']/g, "")
                 if (normalizedName === text) {
                     matched.push(yokai);
                     revealYokai(yokai, lang);

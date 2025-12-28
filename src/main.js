@@ -136,23 +136,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         displayYokai(yokaiContent, yokais, savedLang);
 
-        yokaiNameInput.addEventListener("input", () => {
-            const matchedYokais = findYokaiByInput(yokaiNameInput.value, yokais, savedLang);
-            
-            matchedYokais.forEach(matched => {
-            if (!foundYokai.includes(matched.id)) {
-                    console.log("Yokai :", matched);
-                    foundYokai.push(matched.id);
-                    console.log(foundYokai)
-                    updateScore(yokais.length, foundYokai.length, scoreOutput);
-                } else {
-                    console.log("Yokai", matched.names[savedLang].display, "already found");
-                }
-                yokaiNameInput.value = "";
-            });
+        yokaiNameInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                const matchedYokais = findYokaiByInput(yokaiNameInput.value, yokais, savedLang);
+                
+                matchedYokais.forEach(matched => {
+                    if (!foundYokai.includes(matched.id)) {
+                        console.log("Yokai :", matched);
+                        foundYokai.push(matched.id);
+                        console.log(foundYokai)
+                        updateScore(yokais.length, foundYokai.length, scoreOutput);
+                    } else {
+                        console.log("Yokai", matched.names[savedLang].display, "already found");
+                    }
+                });
 
-            if (foundYokai.length === yokais.length) {
-                stopTimer();
+                yokaiNameInput.value = "";
+    
+                if (foundYokai.length === yokais.length) {
+                    stopTimer();
+                }
             }
         })
     }
