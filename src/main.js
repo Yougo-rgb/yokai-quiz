@@ -1,210 +1,309 @@
+/**
+ * Main Application Controller for the Yo-kai Quiz.
+ * Coordinates game state, UI transitions, and data orchestration.
+ * 
+ * @author Axel Truta & Hugo Pozzi
+ * @version 1.2.0
+ */
 import { t } from "./i18n.js";
 import { initLanguage } from "./lang.js";
 import { initTheme } from "./theme.js";
 import { initModal } from "./modal.js";
-
-import {
-    filterYokaiByTribe,
-    filterYokaiByGame
-} from "./yokaiFilters.js";
-
+import { createHtmlAndPdf } from "./pdf.js";
 import { displayYokai, clearYokai } from "./yokaiDisplay.js";
-
+import { filterYokaiByTribe, filterYokaiByGame } from "./yokaiFilters.js";
 import { 
-    findYokaiByInput, 
-    revealYokai,
-    updateScore, 
-    resetScore, 
-    initTimer, 
-    startTimer, 
-    stopTimer, 
-    resetTimer,
-    launchConfetti
+    findYokaiByInput, updateScore, resetScore, initTimer, 
+    startTimer, stopTimer, resetTimer, launchConfetti 
 } from "./game.js";
 
-import { createHtmlAndPdf } from "./pdf.js"
-
 document.addEventListener("DOMContentLoaded", async () => {
-
-    /* DOM */
-    const LangSelect = document.getElementById("lang-select");
-    const ThemeToggle = document.getElementById("theme-toggle");
-    const modal = document.getElementById("game-modal");
-    const modeContainer = modal.querySelector(".mode-buttons");
-    const startBtn = document.getElementById("start-game");
-    const resetBtn = document.getElementById("reset-game");
-    const closeBtn = document.getElementById("close-modal");
-    const yokaiContent = document.getElementById("yokai-content");
-    const yokaiNameInput = document.getElementById("yo-kai-name");
-    const timerOutput = document.getElementById("timer");
-    const scoreOutput = document.getElementById("score");
-    const gameModeText = document.getElementById("game-mode-text");
-    const endGame = document.getElementById("end-game");
-    const restartBtn = document.getElementById("restart-btn");
-    const endGameModeText = document.getElementById("end-game-mode-text");
-    const endGameTime = document.getElementById("end-game-time");
-    const generatePdfBtn = document.getElementById("generate-pdf");
-
-    /* Init language */
-    let savedLang = await initLanguage(LangSelect, (lang) => {
-        populateGameModeButton(lang);
-        if (isGameStart) {
-            clearYokai(yokaiContent);
-            displayYokai(yokaiContent, yokais, lang);
-        }
-    });
-
-    /* Init theme */
-    initTheme(ThemeToggle);
-
-    /* Game state */
-    let isGameStart = false;
-    let allYokai = [];
-    let yokais = [];
-    let foundYokai = [];
-    let startTime = null;
-    let timerId = null;
-    let gameModeLabel = "";
-    let excludedYokais = ['casteliusi', 'casteliusii', 'cuttanah'];
-    let excludedYokaisFound = [];
-
-    /* Init modal */
-    initModal({
-        modal,
-        startBtn,
-        closeBtn,
-        resetBtn,
-        onReset: resetGame
-    });
-
-    /* Init Timer */
-    initTimer(timerOutput);
-
-    /* Load yokai */
-    const res = await fetch("../data/yokai/ykw1.json");
-    allYokai = (await res.json()).yokai;
-
-    /* Data */
-    const tribes = (await (await fetch("../data/tribes.json")).json()).tribes;
-    const games = (await (await fetch("../data/games.json")).json()).games;
-
-    function populateGameModeButton(lang) {
-        modeContainer.innerHTML = "";
-
-        const allBtn = document.createElement("button");
-        allBtn.classList.add("mode-btn");
-        allBtn.textContent = t("quiz.modeAll") || "All";
-        allBtn.onclick = () => {
-            yokais = allYokai;
-            gameModeLabel = t("quiz.modeAll") || "All"
-            startGame();
-        };
-        modeContainer.appendChild(allBtn);
-
-        games.forEach(game => {
-            const btn = document.createElement("button");
-            btn.classList.add("mode-btn");
-            btn.textContent = game.names[lang].display;
-            btn.onclick = () => {
-                yokais = filterYokaiByGame(allYokai, game.id);
-                gameModeLabel = game.names[lang].display;
-                startGame();
-            };
-            modeContainer.appendChild(btn);
-        });
-
-        tribes.forEach(tribe => {
-            const btn = document.createElement("button");
-            btn.classList.add("mode-btn");
-            btn.textContent = tribe.names[lang].display;
-            btn.onclick = () => {
-                yokais = filterYokaiByTribe(allYokai, tribe.id);
-                gameModeLabel = tribe.names[lang].display;
-                startGame();
-            };
-            modeContainer.appendChild(btn);
-        });
-    }
-
-    function startGame() {
-        setupStartGame();
-        yokaiNameInput.focus();
-        yokaiNameInput.select();
-        resetScore(yokais.length, scoreOutput);
-        startTimer();
-
-        displayYokai(yokaiContent, yokais, savedLang);
-        gameModeText.textContent = gameModeLabel;
-
-        yokaiNameInput.addEventListener("input", () => {
-            const matchedYokais = findYokaiByInput(yokaiNameInput.value, yokais, savedLang, excludedYokais, excludedYokaisFound);
-            
-            matchedYokais.forEach(matched => {
-                if (!foundYokai.includes(matched.id)) {
-                    console.log("Yokai :", matched);
-                    foundYokai.push(matched.id);
-                    console.log(foundYokai)
-                    updateScore(yokais.length, foundYokai.length, scoreOutput);
-                } else {
-                    console.log("Yokai", matched.names[savedLang].display, "already found");
-                }
-                yokaiNameInput.value = "";
-            });
     
-            if (foundYokai.length === yokais.length) {
-                stopTimer();
-                launchConfetti();
-                endGame.style.display = "flex";
-                endGameModeText.textContent = gameModeLabel;
-                endGameTime.textContent = t("quiz.time") + ": " + timerOutput.textContent;
-                restartBtn.onclick = function() { resetGame(); };
-                generatePdfBtn.onclick = function() { createHtmlAndPdf(yokais, foundYokai, {
-                    lang: savedLang,
-                    time: timerOutput.textContent,
-                    mode: gameModeLabel
-                }); };
-            }
-        })
+    /** 
+     * Centralized DOM elements mapping to avoid multiple querySelector calls.
+     * 
+     * @type {Object<string, HTMLElement>} 
+     */
+    const UI = {
+        langSelect: document.getElementById("lang-select"),
+        themeToggle: document.getElementById("theme-toggle"),
+        modal: document.getElementById("game-modal"),
+        modeContainer: document.querySelector(".mode-buttons"),
+        startBtn: document.getElementById("start-game"),
+        resetBtn: document.getElementById("reset-game"),
+        closeBtn: document.getElementById("close-modal"),
+        yokaiContent: document.getElementById("yokai-content"),
+        yokaiNameInput: document.getElementById("yo-kai-name"),
+        timerOutput: document.getElementById("timer"),
+        scoreOutput: document.getElementById("score"),
+        gameModeText: document.getElementById("game-mode-text"),
+        endGame: document.getElementById("end-game"),
+        restartBtn: document.getElementById("restart-btn"),
+        endGameModeText: document.getElementById("end-game-mode-text"),
+        endGameTime: document.getElementById("end-game-time"),
+        generatePdfBtn: document.getElementById("generate-pdf")
+    };
+
+    /** 
+     * Centralized Game State to track the session progress.
+     * @type {Object}
+     */
+    let state = {
+        isGameStart: false,
+        allYokai: [],
+        currentYokaiPool: [],
+        foundYokaiIds: [],
+        savedLang: "en",
+        gameModeLabel: "",
+        excludedYokais: ['casteliusi', 'casteliusii', 'cuttanah'],
+        excludedYokaisFound: []
+    };
+
+    /**
+     * Entry point: Initializes core components and loads remote data.
+     * 
+     * Starts the app lifecycle by setting up i18n, theme, and fetching JSON files.
+     * 
+     * @async
+     * 
+     * @returns {Promise<void>}
+     */
+    async function init() {
+        state.savedLang = await initLanguage(UI.langSelect, handleLanguageChange);
+        initTheme(UI.themeToggle);
+        initTimer(UI.timerOutput);
+        
+        initModal({
+            modal: UI.modal, 
+            startBtn: UI.startBtn, 
+            closeBtn: UI.closeBtn,
+            resetBtn: UI.resetBtn, 
+            onReset: resetGame
+        });
+
+        await loadAllData();
+        populateGameModeButtons(state.savedLang);
+        setupEventListeners();
     }
 
+    /**
+     * Fetches all necessary JSON assets in parallel using Promise.all for performance.
+     * 
+     * @async
+     * 
+     * @returns {Promise<void>}
+     * 
+     * @example
+     * await loadAllData();
+     * console.log(state.allYokai.length); // Outputs total Yo-kai count
+     */
+    async function loadAllData() {
+        try {
+            const [yData, tData, gData] = await Promise.all([
+                fetch("../data/yokai/ykw1.json").then(r => r.json()),
+                fetch("../data/tribes.json").then(r => r.json()),
+                fetch("../data/games.json").then(r => r.json())
+            ]);
+            state.allYokai = yData.yokai;
+            state.tribes = tData.tribes;
+            state.games = gData.games;
+        } catch (error) {
+            console.error("Failed to load game data:", error);
+        }
+    }
+
+    /**
+     * Prepares and starts a new game session.
+     * 
+     * Transitions the UI, resets progress, and starts the countdown.
+     * 
+     * @param {Array<Object>} filteredYokais - The specific subset of Yo-kai to find.
+     * @param {string} label - The human-readable name of the current mode.
+     * @example
+     * startGame(legendaryYokais, "Legendary Tribe");
+     */
+    function startGame(filteredYokais, label) {
+        state.isGameStart = true;
+        state.currentYokaiPool = filteredYokais;
+        state.gameModeLabel = label;
+        state.foundYokaiIds = [];
+        state.excludedYokaisFound = [];
+
+        toggleUIMode(true);
+        UI.yokaiNameInput.focus();
+        resetScore(state.currentYokaiPool.length, UI.scoreOutput);
+        displayYokai(UI.yokaiContent, state.currentYokaiPool, state.savedLang);
+        startTimer();
+    }
+
+    /**
+     * Resets the game to the landing state.
+     * 
+     * Stops all timers, clears the UI grid, and resets state flags.
+     * 
+     * @returns {void}
+     */
     function resetGame() {
-        setupResetGame();
-        clearYokai(yokaiContent);
-        resetScore(0, scoreOutput);
+        state.isGameStart = false;
+        toggleUIMode(false);
         stopTimer();
         resetTimer();
+        clearYokai(UI.yokaiContent);
+        resetScore(0, UI.scoreOutput);
     }
 
-    populateGameModeButton(savedLang);
-
-    function setupStartGame() {
-        isGameStart = true;
-        modal.style.display = "none";
-        startBtn.style.display = "none";
-        resetBtn.style.display = "block";
-        yokaiContent.style.display = "grid";
-        yokaiNameInput.style.display = "flex";
-        timerOutput.style.display = "flex";
-        scoreOutput.style.display = "flex";
-        gameModeText.style.display = "block";
-        yokaiNameInput.value = "";
-        LangSelect.style.display = "none";
-        foundYokai = [];
+    /**
+     * Evaluates if the victory conditions are met (found count == pool size).
+     * 
+     * Triggers the end-game sequence if successful.
+     * 
+     * @returns {boolean} True if the user has won.
+     */
+    function checkVictory() {
+        if (state.foundYokaiIds.length === state.currentYokaiPool.length) {
+            stopTimer();
+            launchConfetti();
+            showEndScreen();
+        }
     }
 
-    function setupResetGame() {
-        isGameStart = false;
-        startBtn.style.display = "block";
-        resetBtn.style.display = "none";
-        yokaiContent.style.display = "none";
-        yokaiNameInput.style.display = "none";
-        timerOutput.style.display = "none";
-        scoreOutput.style.display = "none";
-        gameModeText.style.display = "none";
-        yokaiNameInput.value = "";
-        LangSelect.style.display = "flex";
-        endGame.style.display = "none";
-        yokais = [];
-        foundYokai = [];
+    /**
+     * Attaches global listeners to the UI elements.
+     * 
+     * Defined once at init to optimize memory and prevent duplicate events.
+     * 
+     * @returns {void}
+     */
+    function setupEventListeners() {
+        UI.yokaiNameInput.addEventListener("input", (e) => {
+            if (!state.isGameStart) return;
+
+            const matches = findYokaiByInput(
+                e.target.value, 
+                state.currentYokaiPool, 
+                state.savedLang, 
+                state.excludedYokais, 
+                state.excludedYokaisFound
+            );
+
+            matches.forEach(yokai => {
+                if (!state.foundYokaiIds.includes(yokai.id)) {
+                    state.foundYokaiIds.push(yokai.id);
+                    updateScore(state.currentYokaiPool.length, state.foundYokaiIds.length, UI.scoreOutput);
+                    e.target.value = "";
+                    checkVictory();
+                }
+            });
+        });
+
+        UI.restartBtn.onclick = resetGame;
+        
+        UI.generatePdfBtn.onclick = () => createHtmlAndPdf(state.currentYokaiPool, state.foundYokaiIds, {
+            lang: state.savedLang,
+            time: UI.timerOutput.textContent,
+            mode: state.gameModeLabel
+        });
     }
+
+    /**
+     * Updates the application language state and re-renders translatable components.
+     * 
+     * @param {string} lang - The new language code (e.g., 'fr', 'en', 'jp').
+     * 
+     * @returns {void}
+     */
+    function handleLanguageChange(lang) {
+        state.savedLang = lang;
+        populateGameModeButtons(lang);
+        if (state.isGameStart) {
+            displayYokai(UI.yokaiContent, state.currentYokaiPool, lang);
+        }
+    }
+
+    /**
+     * Toggles between "Gameplay" and "Landing/Selection" visual modes.
+     * 
+     * Controls CSS display properties for the entire UI dashboard.
+     * 
+     * @param {boolean} playing - Set to true to show game controls, false for menu.
+     * 
+     * @returns {void}
+     */
+    function toggleUIMode(playing) {
+        const activeDisplay = playing ? "flex" : "none";
+        const landingDisplay = playing ? "none" : "flex";
+
+        UI.modal.style.display = "none";
+        UI.startBtn.style.display = landingDisplay;
+        UI.langSelect.style.display = landingDisplay;
+        
+        UI.resetBtn.style.display = playing ? "block" : "none";
+        UI.yokaiContent.style.display = playing ? "grid" : "none";
+        UI.yokaiNameInput.style.display = activeDisplay;
+        UI.timerOutput.style.display = activeDisplay;
+        UI.scoreOutput.style.display = activeDisplay;
+        UI.gameModeText.style.display = playing ? "block" : "none";
+        UI.gameModeText.textContent = state.gameModeLabel;
+        UI.endGame.style.display = "none";
+        
+        if (playing) UI.yokaiNameInput.value = "";
+    }
+
+    /**
+     * Renders the mode selection buttons based on loaded Tribes and Games metadata.
+     * 
+     * Uses the i18n service to translate button labels.
+     * 
+     * @param {string} lang - The language to use for button text.
+     * 
+     * @returns {void}
+     */
+    function populateGameModeButtons(lang) {
+        UI.modeContainer.innerHTML = "";
+        
+        // Default 'All' Mode
+        createModeBtn(t("quiz.modeAll") || "All", () => startGame(state.allYokai, t("quiz.modeAll") || "All"));
+        
+        // Dynamic Game Modes
+        state.games.forEach(g => createModeBtn(
+            g.names[lang].display, 
+            () => startGame(filterYokaiByGame(state.allYokai, g.id), g.names[lang].display)
+        ));
+        
+        // Dynamic Tribe Modes
+        state.tribes.forEach(t => createModeBtn(
+            t.names[lang].display, 
+            () => startGame(filterYokaiByTribe(state.allYokai, t.id), t.names[lang].display)
+        ));
+    }
+
+    /**
+     * UI Component Factory: Creates a styled button for game modes.
+     * 
+     * @param {string} label - The text to display on the button.
+     * @param {Function} onClick - The function to execute when clicked.
+     * 
+     * @returns {HTMLButtonElement} The generated button element.
+     */
+    function createModeBtn(label, onClick) {
+        const btn = document.createElement("button");
+        btn.className = "mode-btn";
+        btn.textContent = label;
+        btn.onclick = onClick;
+        UI.modeContainer.appendChild(btn);
+    }
+
+    /**
+     * Displays the final summary overlay screen with time and mode results.
+     * 
+     * @returns {void}
+     */
+    function showEndScreen() {
+        UI.endGame.style.display = "flex";
+        UI.endGameModeText.textContent = state.gameModeLabel;
+        UI.endGameTime.textContent = `${t("quiz.time")}: ${UI.timerOutput.textContent}`;
+    }
+
+    // Launch the application
+    init();
 });

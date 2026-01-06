@@ -1,6 +1,21 @@
+/**
+ * Generates a visual summary of game results in HTML and exports it as a PDF.
+ * 
+ * This function handles multi-language support (EN, FR, JP), dynamically selects 
+ * a subset of found Yo-kai for display, and uses the html2pdf library for export.
+ * 
+ * @param {Array<Object>} yokais - The complete database of Yo-kai objects.
+ * @param {string[]} foundYokai - Array of IDs corresponding to the Yo-kai found by the user.
+ * @param {Object} optionsGame - The game session results and settings.
+ * @param {('en'|'fr'|'jp')} optionsGame.lang - The language code for the PDF content.
+ * @param {string} optionsGame.time - The final formatted time string (e.g., "08:45").
+ * @param {string} optionsGame.mode - The game category/mode played (e.g., "All", "YKW1").
+ * 
+ * @example
+ * createHtmlAndPdf(allYokais, ['196', '3'], { lang: 'en', time: '02:30', mode: 'All' });
+ */
 export function createHtmlAndPdf(yokais, foundYokai, optionsGame) {
-    // optionsGame = { lang: 'en' | 'fr' | 'jp', time: '08:45', mode: 'All' }
-    console.log(optionsGame)
+    
     const container = document.createElement("div");
 
     /* Language */

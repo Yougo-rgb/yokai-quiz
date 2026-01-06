@@ -1,4 +1,12 @@
-export function displayYokai(container, yokais, lang) {
+/**
+ * Dynamically renders the Yo-kai list into the container by groups of 12.
+ * 
+ * Initializes Yo-kai as hidden placeholders using an interrogation mark image.
+ * 
+ * @param {HTMLElement} container - The parent element where the Yo-kai groups will be appended.
+ * @param {Array<Object>} yokais - The array of Yo-kai objects to be displayed.
+ */
+export function displayYokai(container, yokais) {
     container.innerHTML = "";
 
     for (let i = 0; i < yokais.length; i += 12) {
@@ -14,8 +22,6 @@ export function displayYokai(container, yokais, lang) {
 
             const img = document.createElement("img");
             img.src = "../assets/ui/interogation.png";
-            // img.alt = yokai.names[lang].display;
-            // img.title = yokai.names[lang].display;
             img.style.width = "50px";
             img.style.height = "50px";
             img.style.borderRadius = "50%";
@@ -28,6 +34,11 @@ export function displayYokai(container, yokais, lang) {
     }
 }
 
+/**
+ * Removes all content from the Yo-kai container.
+ * 
+ * @param {HTMLElement} container - The DOM element to be emptied.
+ */
 export function clearYokai(container) {
     container.innerHTML = '';
 }
