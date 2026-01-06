@@ -18,8 +18,11 @@ import {
     initTimer, 
     startTimer, 
     stopTimer, 
-    resetTimer 
+    resetTimer,
+    launchConfetti
 } from "./game.js";
+
+import { createHtmlAndPdf } from "./pdf.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -36,6 +39,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const timerOutput = document.getElementById("timer");
     const scoreOutput = document.getElementById("score");
     const gameModeText = document.getElementById("game-mode-text");
+    const endGame = document.getElementById("end-game");
+    const restartBtn = document.getElementById("restart-btn");
+    const endGameModeText = document.getElementById("end-game-mode-text");
+    const endGameTime = document.getElementById("end-game-time");
+    const generatePdfBtn = document.getElementById("generate-pdf");
 
     /* Init language */
     let savedLang = await initLanguage(LangSelect, (lang) => {
@@ -56,6 +64,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     let foundYokai = [];
     let startTime = null;
     let timerId = null;
+    let gameModeLabel = "";
+    let excludedYokais = ['casteliusi', 'casteliusii', 'cuttanah'];
+    let excludedYokaisFound = [];
 
     /* Init modal */
     initModal({
@@ -85,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         allBtn.textContent = t("quiz.modeAll") || "All";
         allBtn.onclick = () => {
             yokais = allYokai;
-            gameModeText.textContent = t("quiz.modeAll") || "All"
+            gameModeLabel = t("quiz.modeAll") || "All"
             startGame();
         };
         modeContainer.appendChild(allBtn);
@@ -96,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             btn.textContent = game.names[lang].display;
             btn.onclick = () => {
                 yokais = filterYokaiByGame(allYokai, game.id);
-                gameModeText.textContent = game.names[lang].display
+                gameModeLabel = game.names[lang].display;
                 startGame();
             };
             modeContainer.appendChild(btn);
@@ -108,7 +119,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             btn.textContent = tribe.names[lang].display;
             btn.onclick = () => {
                 yokais = filterYokaiByTribe(allYokai, tribe.id);
-                gameModeText.textContent = tribe.names[lang].display
+                gameModeLabel = tribe.names[lang].display;
                 startGame();
             };
             modeContainer.appendChild(btn);
@@ -116,6 +127,57 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function startGame() {
+        setupStartGame();
+        yokaiNameInput.focus();
+        yokaiNameInput.select();
+        resetScore(yokais.length, scoreOutput);
+        startTimer();
+
+        displayYokai(yokaiContent, yokais, savedLang);
+        gameModeText.textContent = gameModeLabel;
+
+        yokaiNameInput.addEventListener("input", () => {
+            const matchedYokais = findYokaiByInput(yokaiNameInput.value, yokais, savedLang, excludedYokais, excludedYokaisFound);
+            
+            matchedYokais.forEach(matched => {
+                if (!foundYokai.includes(matched.id)) {
+                    console.log("Yokai :", matched);
+                    foundYokai.push(matched.id);
+                    console.log(foundYokai)
+                    updateScore(yokais.length, foundYokai.length, scoreOutput);
+                } else {
+                    console.log("Yokai", matched.names[savedLang].display, "already found");
+                }
+                yokaiNameInput.value = "";
+            });
+    
+            if (foundYokai.length === yokais.length) {
+                stopTimer();
+                launchConfetti();
+                endGame.style.display = "flex";
+                endGameModeText.textContent = gameModeLabel;
+                endGameTime.textContent = t("quiz.time") + ": " + timerOutput.textContent;
+                restartBtn.onclick = function() { resetGame(); };
+                generatePdfBtn.onclick = function() { createHtmlAndPdf(yokais, foundYokai, {
+                    lang: savedLang,
+                    time: timerOutput.textContent,
+                    mode: gameModeLabel
+                }); };
+            }
+        })
+    }
+
+    function resetGame() {
+        setupResetGame();
+        clearYokai(yokaiContent);
+        resetScore(0, scoreOutput);
+        stopTimer();
+        resetTimer();
+    }
+
+    populateGameModeButton(savedLang);
+
+    function setupStartGame() {
         isGameStart = true;
         modal.style.display = "none";
         startBtn.style.display = "none";
@@ -127,40 +189,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         gameModeText.style.display = "block";
         yokaiNameInput.value = "";
         LangSelect.style.display = "none";
-
         foundYokai = [];
-        yokaiNameInput.focus();
-        yokaiNameInput.select();
-        resetScore(yokais.length, scoreOutput);
-        startTimer();
-
-        displayYokai(yokaiContent, yokais, savedLang);
-
-        yokaiNameInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") {
-                const matchedYokais = findYokaiByInput(yokaiNameInput.value, yokais, savedLang);
-                
-                matchedYokais.forEach(matched => {
-                    if (!foundYokai.includes(matched.id)) {
-                        console.log("Yokai :", matched);
-                        foundYokai.push(matched.id);
-                        console.log(foundYokai)
-                        updateScore(yokais.length, foundYokai.length, scoreOutput);
-                    } else {
-                        console.log("Yokai", matched.names[savedLang].display, "already found");
-                    }
-                });
-
-                yokaiNameInput.value = "";
-    
-                if (foundYokai.length === yokais.length) {
-                    stopTimer();
-                }
-            }
-        })
     }
 
-    function resetGame() {
+    function setupResetGame() {
         isGameStart = false;
         startBtn.style.display = "block";
         resetBtn.style.display = "none";
@@ -171,13 +203,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         gameModeText.style.display = "none";
         yokaiNameInput.value = "";
         LangSelect.style.display = "flex";
+        endGame.style.display = "none";
         yokais = [];
         foundYokai = [];
-        clearYokai(yokaiContent);
-        resetScore(0, scoreOutput);
-        stopTimer();
-        resetTimer();
     }
-
-    populateGameModeButton(savedLang);
 });

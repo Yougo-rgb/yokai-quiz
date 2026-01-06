@@ -7,6 +7,14 @@
     <link rel="icon" href="../assets/ui/icon.ico" sizes="32x32">
     <title>Yo-kai Quiz</title>
 </head>
+<script type="module" src="./src/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
+    integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+></script>
 <body>
     <div class="header">
         <div class="header-right">
@@ -33,6 +41,15 @@
         <div id="yokai-content" class="yokai-content">
             <!-- All the yokai selected with the game mode -->
         </div>
+        <div id="end-game" class="end-game">
+            <div id="end-game-content" class="end-game-content">
+                <h3 data-i18n="quiz.congratulation">Congratulation !</h3>
+                <h4 id="end-game-mode-text"></h4>
+                <h4 id="end-game-time" data-i18n="quiz.time">Time</h4>
+                <button id="generate-pdf" class="mode-btn" data-i18n="quiz.getPdf">Get PDF</button>
+                <button id="restart-btn" data-i18n="quiz.restartGame" class="">Restart</button>
+            </div>
+        </div>
     </div>
 
     <div id="game-modal" class="modal">
@@ -45,7 +62,5 @@
             <button id="close-modal">Cancel</button>
         </div>
     </div>
-
-    <script type="module" src="./src/main.js"></script>
 </body>
 </html>

@@ -11,6 +11,10 @@
         "modeAll": "Tous",
         "startGame": "Commencer la partie",
         "resetGame": "Arrêter la partie",
-        "gameModeText": "Mode : "
+        "gameModeText": "Mode : ",
+        "restartGame": "Recommencer",
+        "congratulation": "Félécitation !",
+        "time": "Temps",
+        "getPdf": "Obtiens un PDF de ton exploit !"
     }
 }

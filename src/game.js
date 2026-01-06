@@ -1,4 +1,4 @@
-export function findYokaiByInput(inputText, yokais, lang) {
+export function findYokaiByInput(inputText, yokais, lang, excludedYokais, excludedYokaisFound) {
     const text = inputText.toLowerCase().replace(/[\s.\-']/g, "")
     const matched = [];
 
@@ -10,7 +10,11 @@ export function findYokaiByInput(inputText, yokais, lang) {
 
             namesToCheck.forEach(name => {
                 const normalizedName = name.toLowerCase().replace(/[\s.\-']/g, "")
-                if (normalizedName === text) {
+                if (normalizedName === text && !excludedYokaisFound.includes(text)) {
+                    if (excludedYokais.includes(text)) {
+                        excludedYokaisFound.push(text)
+                        console.log(excludedYokaisFound)
+                    }
                     matched.push(yokai);
                     revealYokai(yokai, lang);
                 }
@@ -79,4 +83,12 @@ export function resetTimer() {
     stopTimer();
     startTime = null;
     timerOutput.textContent = "00:00";
+}
+
+export function launchConfetti() {
+    confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 }
+    });
 }
