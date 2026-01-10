@@ -3,7 +3,6 @@
  * Coordinates game state, UI transitions, and data orchestration.
  * 
  * @author Axel Truta & Hugo Pozzi
- * @version 1.2.0
  */
 import { t } from "./i18n.js";
 import { initLanguage } from "./lang.js";
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         foundYokaiIds: [],
         savedLang: "en",
         gameModeLabel: "",
-        excludedYokais: ['casteliusi', 'casteliusii', 'cuttanah'],
+        excludedYokais: ['casteliusi', 'casteliusii', 'cuttanah', 'unknown'],
         excludedYokaisFound: []
     };
 
@@ -114,8 +113,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     /**
      * Prepares and starts a new game session.
+     * Checks whether the selected mode contains any Yo-kai.
      * 
-     * Transitions the UI, resets progress, and starts the countdown.
+     * Transitions the UI, resets progress, and starts the game timer.
      * 
      * @param {Array<Object>} filteredYokais - The specific subset of Yo-kai to find.
      * @param {string} label - The human-readable name of the current mode.
@@ -123,17 +123,21 @@ document.addEventListener("DOMContentLoaded", async () => {
      * startGame(legendaryYokais, "Legendary Tribe");
      */
     function startGame(filteredYokais, label) {
-        state.isGameStart = true;
-        state.currentYokaiPool = filteredYokais;
-        state.gameModeLabel = label;
-        state.foundYokaiIds = [];
-        state.excludedYokaisFound = [];
-
-        toggleUIMode(true);
-        UI.yokaiNameInput.focus();
-        resetScore(state.currentYokaiPool.length, UI.scoreOutput);
-        displayYokai(UI.yokaiContent, state.currentYokaiPool, state.savedLang);
-        startTimer();
+        if (filteredYokais.length !== 0) {
+            state.isGameStart = true;
+            state.currentYokaiPool = filteredYokais;
+            state.gameModeLabel = label;
+            state.foundYokaiIds = [];
+            state.excludedYokaisFound = [];
+    
+            toggleUIMode(true);
+            UI.yokaiNameInput.focus();
+            resetScore(state.currentYokaiPool.length, UI.scoreOutput);
+            displayYokai(UI.yokaiContent, state.currentYokaiPool, state.savedLang);
+            startTimer();
+        } else {
+            window.alert("Mode '" + label + "' not availble yet!");
+        }
     }
 
     /**

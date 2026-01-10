@@ -54,6 +54,10 @@ export function revealYokai(yokai, lang) {
         img.src = yokai.image;
         img.alt = yokai.names[lang].display;
         img.title = yokai.names[lang].display;
+        img.onerror = () => {
+            img.onerror = null;
+            img.src = "./assets/ui/whisper.png";
+        }
     });
 }
 

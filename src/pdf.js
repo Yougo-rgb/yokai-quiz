@@ -14,7 +14,7 @@
  * @example
  * createHtmlAndPdf(allYokais, ['196', '3'], { lang: 'en', time: '02:30', mode: 'All' });
  */
-export function createHtmlAndPdf(yokais, foundYokai, optionsGame) {
+export async function createHtmlAndPdf(yokais, foundYokai, optionsGame) {
     
     const container = document.createElement("div");
 
@@ -113,16 +113,22 @@ export function createHtmlAndPdf(yokais, foundYokai, optionsGame) {
 
     const yokaiList = container.querySelector("#yokai-list");
 
-    selectedYokais.forEach(yokai => {
+    for (const yokai of selectedYokais) {
         const badge = document.createElement("div");
-        badge.classList.add("yokai-badge");
         const img = document.createElement("img");
-        img.src = yokai.image ? yokai.image : "./assets/ui/whisper.png";
+
+        badge.classList.add("yokai-badge");
+
+        const safeImg = await loadImageSafe(
+            yokai.image, "./assets/ui/whisper.png"
+        );
+
+        img.src = safeImg;
         img.alt = yokai.names[optionsGame.lang]?.display || yokai.names["en"].display;
-        // TODO: Put an placeholder image if the yokai image is not found
+
         badge.appendChild(img);
         yokaiList.appendChild(badge);
-    });
+    };
 
     /* Create PDF */
     const element = container.querySelector("#pdf-content");
@@ -136,4 +142,15 @@ export function createHtmlAndPdf(yokais, foundYokai, optionsGame) {
 
     html2pdf().set(pdfOptions).from(element).save();
     container.style.display = "none";
+}
+
+function loadImageSafe(primarySrc, fallbackSrc) {
+    return new Promise(resolve => {
+        const img = new Image();
+
+        img.onload = () => resolve(primarySrc);
+        img.onerror = () => resolve(fallbackSrc);
+
+        img.src = primarySrc;
+    });
 }
