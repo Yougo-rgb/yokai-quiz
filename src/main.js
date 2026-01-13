@@ -99,9 +99,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function loadAllData() {
         try {
             const [yData, tData, gData] = await Promise.all([
-                fetch("../data/yokai/ykw1.json").then(r => r.json()),
-                fetch("../data/tribes.json").then(r => r.json()),
-                fetch("../data/games.json").then(r => r.json())
+                fetch("./data/yokai/ykw1.json").then(r => r.json()),
+                fetch("./data/tribes.json").then(r => r.json()),
+                fetch("./data/games.json").then(r => r.json())
             ]);
             state.allYokai = yData.yokai;
             state.tribes = tData.tribes;

@@ -37,8 +37,8 @@ The game supports multiple modes and languages.
 
 ## 🌐 Play Online
 
-A live version of the quiz will be available on **GitHub Pages**:  
-[https://yougo-rgb.github.io/yokai-quiz](https://yougo-rgb.github.io/yokai-quiz)
+A live version of the quiz will be available on **GitHub Pages**:
+[https://yougo-rgb.github.io/yokai-quiz](https://yougo-rgb.github.io/yokai-quiz/)
 
 ---
 
