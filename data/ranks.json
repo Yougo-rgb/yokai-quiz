@@ -4,36 +4,36 @@
     "e": {
         "id": "e",
         "name": "E",
-        "image": "../assets/ranks/e_rank.png"
+        "image": "./assets/ranks/e_rank.png"
     },
     "d": {
         "id": "d",
         "name": "D",
-        "image": "../assets/ranks/d_rank.png"
+        "image": "./assets/ranks/d_rank.png"
     },
     "c": {
         "id": "c",
         "name": "C",
-        "image": "../assets/ranks/c_rank.png"
+        "image": "./assets/ranks/c_rank.png"
     },
     "b": {
         "id": "b",
         "name": "B",
-        "image": "../assets/ranks/b_rank.png"
+        "image": "./assets/ranks/b_rank.png"
     },
     "a": {
         "id": "a",
         "name": "A",
-        "image": "../assets/ranks/a_rank.png"
+        "image": "./assets/ranks/a_rank.png"
     },
     "s": {
         "id": "s",
         "name": "S",
-        "image": "../assets/ranks/s_rank.png"
+        "image": "./assets/ranks/s_rank.png"
     },
     "boss-rank": {
         "id": "boss-rank",
         "name": "Boss",
-        "image": "../assets/ranks/boss_rank.png"
+        "image": "./assets/ranks/boss_rank.png"
     }
 }

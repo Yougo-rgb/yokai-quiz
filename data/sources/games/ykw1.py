@@ -93,7 +93,7 @@ def scrape_yokai_data(url):
 
                 yokai = {
                     "id": int(medallium_no),
-                    "image": f"../../assets/yokai/{yokai_name.lower().replace(' ', '_').replace('.', '')}.png",
+                    "image": f"././assets/yokai/{yokai_name.lower().replace(' ', '_').replace('.', '')}.png",
                     "tribe_id": tribe,
                     "rank_id": rank,
                     "yokai_type": yokai_type,
@@ -116,7 +116,7 @@ def scrape_yokai_data(url):
 
 if __name__ == '__main__':
     url = 'https://yokaiwatch.fandom.com/wiki/List_of_Yo-kai_by_Medallium_Number_(Yo-kai_Watch)'
-    filename = "../../yokai/ykw1.json"
+    filename = "././yokai/ykw1.json"
 
     print("Scraping Yo-kai Watch 1 datas...\n")
     data = scrape_yokai_data(url)

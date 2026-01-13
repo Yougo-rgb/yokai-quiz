@@ -9,7 +9,7 @@
                 "jp" : { "display": "イサマシ族", "aliases": ["Isamashi-zoku"] }
             },
             "color": "#ED4122",
-            "image": "../assets/tribes/brave.png"
+            "image": "./assets/tribes/brave.png"
         },
         {
             "id": "mysterious",
@@ -19,7 +19,7 @@
                 "jp" : { "display": "フシギ族", "aliases": ["Fushigi-zoku"] }
             },
             "color": "#FEF006",
-            "image": "../assets/tribes/mysterious.png"
+            "image": "./assets/tribes/mysterious.png"
         },
         {
             "id": "tough",
@@ -29,7 +29,7 @@
                 "jp" : { "display": "ゴーケツ族", "aliases": ["Gōketsu-zoku"] }
             },
             "color": "#F58144",
-            "image": "../assets/tribes/tough.png"
+            "image": "./assets/tribes/tough.png"
         },
         {
             "id": "charming",
@@ -39,7 +39,7 @@
                 "jp" : { "display": "プリチー族", "aliases": ["Purichī-zoku"] }
             },
             "color": "#F359A1",
-            "image": "../assets/tribes/charming.png"
+            "image": "./assets/tribes/charming.png"
         },
         {
             "id": "heartful",
@@ -49,7 +49,7 @@
                 "jp" : { "display": "ポカポカ族", "aliases": ["Pokapoka-zoku"] }
             },
             "color": "#59B855",
-            "image": "../assets/tribes/heartful.png"
+            "image": "./assets/tribes/heartful.png"
         },
        {
             "id": "shady",
@@ -59,7 +59,7 @@
                 "jp" : { "display": "ウスラカゲ族", "aliases": ["Usurakage-zoku"] }
             },
             "color": "#05ACE8",
-            "image": "../assets/tribes/shady.png"
+            "image": "./assets/tribes/shady.png"
         },
        {
             "id": "eerie",
@@ -69,7 +69,7 @@
                 "jp" : { "display": "ブキミー族", "aliases": ["Bukimī-zoku"] }
             },
             "color": "#9E54A2",
-            "image": "../assets/tribes/eerie.png"
+            "image": "./assets/tribes/eerie.png"
         },
         {
             "id": "slippery",
@@ -79,7 +79,7 @@
                 "jp" : { "display": "ニョロロン族", "aliases": ["Nyororon-zoku"] }
             },
             "color": "#4CC5E1",
-            "image": "../assets/tribes/slippery.png"
+            "image": "./assets/tribes/slippery.png"
         },
         {
             "id": "boss",
@@ -89,7 +89,7 @@
                 "jp" : { "display": "ボス妖", "aliases": ["Bosu"] }
             },
             "color": "#272527",
-            "image": "../assets/tribes/boss.png"
+            "image": "./assets/tribes/boss.png"
         },
         {
             "id": "wicked",
@@ -99,7 +99,7 @@
                 "jp" : { "display": "怪魔族", "aliases": ["Kaima-zoku"] }
             },
             "color": "#0C0E31",
-            "image": "../assets/tribes/wicked.png"
+            "image": "./assets/tribes/wicked.png"
         },
         {
             "id": "wandroid",
@@ -109,7 +109,7 @@
                 "jp" : { "display": "ハグレ族", "aliases": ["Hagure-zoku"] }
             },
             "color": "#16028A",
-            "image": "../assets/tribes/wandroid.png"
+            "image": "./assets/tribes/wandroid.png"
         }
     ]
 }

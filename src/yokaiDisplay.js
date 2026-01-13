@@ -21,7 +21,7 @@ export function displayYokai(container, yokais) {
             el.dataset.yokai = yokai.id;
 
             const img = document.createElement("img");
-            img.src = "../assets/ui/interogation.png";
+            img.src = "./assets/ui/interogation.png";
             img.style.width = "50px";
             img.style.height = "50px";
             img.style.borderRadius = "50%";

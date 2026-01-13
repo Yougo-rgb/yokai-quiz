@@ -9,7 +9,7 @@
         "jp": { "display": "妖怪ウォッチ", "aliases": ["Yōkai Watch"] }
       },
       "generation": 1,
-      "image": "../assets/games/ykw1.png"
+      "image": "./assets/games/ykw1.png"
     },
     {
       "id": "ykw2",
@@ -19,7 +19,7 @@
         "jp": { "display": "妖怪ウォッチ2", "aliases": ["Yōkai Watch 2"] }
       },
       "generation": 2,
-      "image": "../assets/games/ykw2.png"
+      "image": "./assets/games/ykw2.png"
     },
     {
       "id": "ykw3",
@@ -29,7 +29,7 @@
         "jp": { "display": "妖怪ウォッチ3", "aliases": ["Yōkai Watch 3"] }
       },
       "generation": 3,
-      "image": "../assets/games/ykw3.png"
+      "image": "./assets/games/ykw3.png"
     }
   ]
 }
